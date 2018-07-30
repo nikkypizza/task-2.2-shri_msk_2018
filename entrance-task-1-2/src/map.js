@@ -5,13 +5,13 @@ import { createFilterControl } from './filter';
 export function initMap(ymaps, containerId) {
   const myMap = new ymaps.Map(containerId, {
     center: [55.76, 37.64],
-    controls: [],
+    // controls: [],
     zoom: 10
   });
 
   const objectManager = new ymaps.ObjectManager({
     clusterize: true,
-    gridSize: 64,
+    // gridSize: 64,
     clusterIconLayout: 'default#pieChart',
     clusterDisableClickZoom: false,
     geoObjectOpenBalloonOnClick: false,
