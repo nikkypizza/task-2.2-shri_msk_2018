@@ -1,0 +1,30 @@
+{
+  "name": "shri_t2-2",
+  "version": "1.0.0",
+  "description": "В этом репозитории находятся материалы тестового задания по вёрстке для [14-й Школы разработки интерфейсов](https://academy.yandex.ru/events/frontend/shri_msk-2018-2) (осень 2018, Москва, Санкт-Петербург, Симферополь).",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-sass": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-imagemin": "latest",
+    "imagemin-guetzli": "latest",
+    "gulp-webp": "latest",
+    "gulp-rename": "latest",
+    "gulp-svgstore": "latest",
+    "gulp-postcss": "latest",
+    "gulp-posthtml": "latest",
+    "posthtml": "latest",
+    "browser-sync": "latest",
+    "gulp-plumber": "latest",
+    "gulp-bower-normalize": "latest",
+    "gulp-csso": "latest",
+    "imagemin-pngquant": "latest"
+  },
+  "scripts": {
+    "devimages": "gulp jpegmin && gulp pngmin && gulp webp && gulp svgo && gulp sprite"
+  },
+  "author": "nikkypizza",
+  "license": "ISC"
+}
