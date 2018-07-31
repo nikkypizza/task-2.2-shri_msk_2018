@@ -1,24 +1,13 @@
 var gulp = require('gulp');
 
 // ######################## //
-//    DEVELOPMENT images START   //
+// DEVELOPMENT images START //
 // ####################### //
+
 var imagemin = require('gulp-imagemin');
-var imageminGuetzli = require('imagemin-guetzli');
-var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var rename = require("gulp-rename");
 var imageminPngquant = require('imagemin-pngquant');
-
-// Minify jpg and make them progressive
-gulp.task('jpegmin', () =>
-  gulp.src('assets/img/**/*.jpg')
-  .pipe(imagemin([
-    imageminGuetzli({ quality: 85 }),
-    imagemin.jpegtran({ progressive: true })
-  ]))
-  .pipe(gulp.dest('img'))
-);
 
 // Minify png
 gulp.task('pngmin', () =>
@@ -28,13 +17,6 @@ gulp.task('pngmin', () =>
   ]))
   .pipe(gulp.dest('img'))
 )
-
-// Generate webp from jpeg\png
-gulp.task("webp", function() {
-  gulp.src("assets/img/**/*.{png,jpg}")
-    .pipe(webp({ quality: 70 }))
-    .pipe(gulp.dest("img/webp"));
-});
 
 // Minify SVG
 gulp.task("svgo", function() {
@@ -55,17 +37,17 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("img/svg"));
 });
 
-// ######################  //
-//    DEVELOPMENT images END   //
+// ###################### //
+// DEVELOPMENT images END //
 // ###################### //
 
 
 // --------------------------------------------//
 
 
-// ######################  //
-//     BrowserSync all files START   //
-// ###################### //
+//    ######################   //
+// BrowserSync all files START //
+//    ######################   //
 
 var browserSync = require('browser-sync');
 var plumber = require('gulp-plumber');
@@ -94,6 +76,6 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream())
 });
 
-// #####################  //
-//     BrowserSync all files END   //
-// #################### //
+//   #####################   //
+// BrowserSync all files END //
+//   #####################   //

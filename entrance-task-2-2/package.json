@@ -9,8 +9,6 @@
     "gulp-sass": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-imagemin": "latest",
-    "imagemin-guetzli": "latest",
-    "gulp-webp": "latest",
     "gulp-rename": "latest",
     "gulp-svgstore": "latest",
     "gulp-postcss": "latest",
@@ -23,7 +21,7 @@
     "imagemin-pngquant": "latest"
   },
   "scripts": {
-    "devimages": "gulp jpegmin && gulp pngmin && gulp webp && gulp svgo && gulp sprite"
+    "devimages": "gulp pngmin && gulp svgo"
   },
   "author": "nikkypizza",
   "license": "ISC"

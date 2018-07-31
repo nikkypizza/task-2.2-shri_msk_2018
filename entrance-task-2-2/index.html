@@ -9,6 +9,225 @@
 </head>
 
 <body>
+  <header>
+    <a href="#" title="На главную">
+      <object type="image/svg+xml" data="img/svg/ya_logo.svg">
+        <img src="img/ya_logo@1x.png" srcset="img/ya_logo@2x.png 2x" width="24" height="24" alt="Яндекс.Дом">
+      </object>
+    </a>
+    <ul>
+      <li>
+        <a href="#">Сводка</a>
+      </li>
+      <li>
+        <a href="#">Устройства</a>
+      </li>
+      <li>
+        <a href="#">Сценарии</a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <section>
+      <h3>Главное</h3>
+      <article>
+        <div>
+          <h2>Привет, Геннадий!</h2>
+          <p>Двери и окна закрыты, сигнализация включена.</p>
+          <div>
+            <div>
+              <span>Дома</span>
+              <span>+23</span>
+            </div>
+            <div>
+              <span>За окном</span>
+              <span>+19</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <object type="image/svg+xml" data="img/svg/icon_temperature_inactive.svg">
+              <img src="img/icon_temperature_inactive@1x.png" srcset="img/icon_temperature_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
+            </object>
+            <h4>Philips Cooler</h4>
+            <p>Начнет охлаждать в 16:30</p>
+          </div>
+          <div>
+            <object type="image/svg+xml" data="img/svg/icon_sun_inactive.svg">
+              <img src="img/icon_sun_inactive@1x.png" srcset="img/icon_sun_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
+            </object>
+            <h4>Xiaomi Yeelight LED Smart Bulb</h4>
+            <p>Включится в 17:00</p>
+          </div>
+          <div>
+            <a href="#">
+              <object type="image/svg+xml" data="img/svg/icon_double_up_arrow.svg">
+                <img src="img/icon_double_up_arrow@1x.png" srcset="img/icon_double_up_arrow@2x.png 2x" width="24" height="24" alt="Не активно">
+              </object>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section>
+      <header>
+        <h3>Избранные сценарии</h3>
+        <div>
+          <button type="button" title="Пролисать назад">
+            <object type="image/svg+xml" data="img/svg/icon_arrow_left.svg">
+              <img src="img/icon_arrow_left@1x.png" srcset="img/icon_arrow_left@2x.png 2x" width="24" height="24" alt="Пролисать назад">
+            </object>
+          </button>
+          <button type="button" title="Пролисать вперед">
+            <object type="image/svg+xml" data="img/svg/icon_arrow_left.svg">
+              <img src="img/icon_arrow_left@1x.png" srcset="img/icon_arrow_left@2x.png 2x" width="24" height="24" alt="Пролисать вперед">
+            </object>
+          </button>
+        </div>
+      </header>
+      <ul>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
+            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
+          </object>
+          <h4>Выключить весь свет в доме и во дворе</h4>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_scheduled.svg">
+            <img src="img/icon_scheduled@1x.png" srcset="img/icon_scheduled@2x.png 2x" width="24" height="24" alt="Не активно">
+          </object>
+          <h4>Я ухожу</h4>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
+            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
+          </object>
+          <h4>Включить свет в коридоре</h4>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_temperature_inactive.svg">
+            <img src="img/icon_temperature_inactive@1x.png" srcset="img/icon_temperature_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
+          </object>
+          <h4>Набрать горячую ванну</h4>
+          <p>Начнётся в 18:00</p>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_temperature_active.svg">
+            <img src="img/icon_temperature_active@1x.png" srcset="img/icon_temperature_active@2x.png 2x" width="24" height="24" alt="Активно">
+          </object>
+          <h4>Сделать пол тёплым во всей квартире</h4>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <header>
+        <h3>Избранные устройства</h3>
+        <ul>
+          <li>
+            <input type="radio" name="device_categories" value="Все" id="radio-select-all" checked>
+            <label for="radio-select-all">Все</label>
+          </li>
+          <li>
+            <input type="radio" name="device_categories" value="Все" id="radio-select-kitchen">
+            <label for="radio-select-kitchen">Кухня</label>
+          </li>
+          <li>
+            <input type="radio" name="device_categories" value="Все" id="radio-select-hall">
+            <label for="radio-select-hall">Зал</label>
+          </li>
+          <li>
+            <input type="radio" name="device_categories" value="Все" id="radio-select-bulbs">
+            <label for="radio-select-bulbs">Лампочки</label>
+          </li>
+          <li>
+            <input type="radio" name="device_categories" value="Все" id="radio-select-cameras">
+            <label for="radio-select-cameras">Камеры</label>
+          </li>
+        </ul>
+        <div>
+          <button type="button" title="Пролисать назад">
+            <object type="image/svg+xml" data="img/svg/icon_arrow_left.svg">
+              <img src="img/icon_arrow_left@1x.png" srcset="img/icon_arrow_left@2x.png 2x" width="24" height="24" alt="Пролисать назад">
+            </object>
+          </button>
+          <button type="button" title="Пролисать вперед">
+            <object type="image/svg+xml" data="img/svg/icon_arrow_left.svg">
+              <img src="img/icon_arrow_left@1x.png" srcset="img/icon_arrow_left@2x.png 2x" width="24" height="24" alt="Пролисать вперед">
+            </object>
+          </button>
+        </div>
+      </header>
+      <ul>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
+            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
+          </object>
+          <h4>Xiaomi Yeelight LED Smart Bulb</h4>
+          <p>Включено</p>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_sun_inactive.svg">
+            <img src="img/icon_sun_inactive@1x.png" srcset="img/icon_sun_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
+          </object>
+          <h4>D-Link Omna 180 Cam</h4>
+          <p>Включится в 17:00</p>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_temperature_inactive.svg">
+            <img src="img/icon_temperature_inactive@1x.png" srcset="img/icon_temperature_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
+          </object>
+          <h4>Elgato Eve Degree Connected</h4>
+          <p>Выключено до 17:00</p>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_sun_inactive.svg">
+            <img src="img/icon_sun_inactive@1x.png" srcset="img/icon_sun_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
+          </object>
+          <h4>LIFX Mini Day & Dusk A60 E27</h4>
+          <p>Включится в 17:00</p>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
+            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
+          </object>
+          <h4>Xiaomi Mi Air Purifier 2S</h4>
+          <p>Включено</p>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_sun_inactive.svg">
+            <img src="img/icon_sun_inactive@1x.png" srcset="img/icon_sun_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
+          </object>
+          <h4>Philips Zhirui</h4>
+          <p>Выключено</p>
+        </li>
+        <li>
+          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
+            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
+          </object>
+          <h4>Xiaomi Mi Air Purifier 2S</h4>
+          <p>Включено</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <ul>
+      <li>
+        <a href="#">Помощь</a>
+      </li>
+      <li>
+        <a href="#">Обратная связь</a>
+      </li>
+      <li>
+        <a href="#">Разработчикам</a>
+      </li>
+      <li>
+        <a href="#">Условия использования</a>
+      </li>
+    </ul>
+    <span>© 2001–2017 ООО «Яндекс»</span>
+  </footer>
 </body>
 
 </html>
