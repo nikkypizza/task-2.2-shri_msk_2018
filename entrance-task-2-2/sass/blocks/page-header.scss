@@ -1,0 +1,36 @@
+.page-header {
+  display: flex;
+}
+
+.page-header__nav-list {
+  display: none;
+}
+
+.page-header__logo {
+  margin: 12px 19px;
+}
+
+.page-header__menu-toggler {
+  width: 16px;
+  height: 16px;
+  margin: 0 12px 0 auto;
+  align-self: center;
+}
+
+.page-header__nav-list-item {
+  margin: 26px 26px 26px 0;
+}
+
+@media ($tablet-width) {
+  .page-header {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .page-header__logo {
+    margin: 26px 49px 33px 40px;
+  }
+
+  .page-header__nav-list-item {
+    margin: 26px 26px 26px 0;
+  }
+}

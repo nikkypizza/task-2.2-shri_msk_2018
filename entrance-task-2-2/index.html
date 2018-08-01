@@ -9,23 +9,28 @@
 </head>
 
 <body>
-  <header>
-    <a href="#" title="На главную">
-      <object type="image/svg+xml" data="img/svg/ya_logo.svg">
-        <img src="img/ya_logo@1x.png" srcset="img/ya_logo@2x.png 2x" width="24" height="24" alt="Яндекс.Дом">
-      </object>
+  <header class="page-header">
+    <a href="#" title="На главную" class="page-header__logo">
+      <img src="img/svg/ya_logo.svg" width="113" height="38" alt="Яндекс.Дом">
     </a>
-    <ul>
-      <li>
-        <a href="#">Сводка</a>
-      </li>
-      <li>
-        <a href="#">Устройства</a>
-      </li>
-      <li>
-        <a href="#">Сценарии</a>
-      </li>
-    </ul>
+    <button type="button" class="page-header__menu-toggler" title="Открыть меню">
+      <svg width="16" height="16">
+        <use xlink:href="#icon_menu_closed"></use>
+      </svg>
+    </button>
+    <nav class="page-header__nav">
+      <ul class="page-header__nav-list">
+        <li class="page-header__nav-list-item">
+          <a href="#">Сводка</a>
+        </li>
+        <li class="page-header__nav-list-item">
+          <a href="#">Устройства</a>
+        </li>
+        <li class="page-header__nav-list-item">
+          <a href="#">Сценарии</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main>
     <section>
@@ -47,25 +52,25 @@
         </div>
         <div>
           <div>
-            <object type="image/svg+xml" data="img/svg/icon_temperature_inactive.svg">
-              <img src="img/icon_temperature_inactive@1x.png" srcset="img/icon_temperature_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
-            </object>
+            <svg width="24" height="24">
+              <use xlink:href="#icon_temperature_inactive"></use>
+            </svg>
             <h4>Philips Cooler</h4>
             <p>Начнет охлаждать в 16:30</p>
           </div>
           <div>
-            <object type="image/svg+xml" data="img/svg/icon_sun_inactive.svg">
-              <img src="img/icon_sun_inactive@1x.png" srcset="img/icon_sun_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
-            </object>
+            <svg width="24" height="24">
+              <use xlink:href="#icon_sun_inactive"></use>
+            </svg>
             <h4>Xiaomi Yeelight LED Smart Bulb</h4>
             <p>Включится в 17:00</p>
           </div>
           <div>
-            <a href="#">
-              <object type="image/svg+xml" data="img/svg/icon_double_up_arrow.svg">
-                <img src="img/icon_double_up_arrow@1x.png" srcset="img/icon_double_up_arrow@2x.png 2x" width="24" height="24" alt="Не активно">
-              </object>
-            </a>
+            <button type="button" title="Показать еще">
+              <svg width="16" height="16">
+                <use xlink:href="#icon_double_up_arrow"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </article>
@@ -75,47 +80,47 @@
         <h3>Избранные сценарии</h3>
         <div>
           <button type="button" title="Пролисать назад">
-            <object type="image/svg+xml" data="img/svg/icon_arrow_left.svg">
-              <img src="img/icon_arrow_left@1x.png" srcset="img/icon_arrow_left@2x.png 2x" width="24" height="24" alt="Пролисать назад">
-            </object>
+            <svg width="9" height="14">
+              <use xlink:href="#icon_arrow_left"></use>
+            </svg>
           </button>
           <button type="button" title="Пролисать вперед">
-            <object type="image/svg+xml" data="img/svg/icon_arrow_left.svg">
-              <img src="img/icon_arrow_left@1x.png" srcset="img/icon_arrow_left@2x.png 2x" width="24" height="24" alt="Пролисать вперед">
-            </object>
+            <svg width="9" height="14">
+              <use xlink:href="#icon_arrow_left"></use>
+            </svg>
           </button>
         </div>
       </header>
       <ul>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
-            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_sun_active"></use>
+          </svg>
           <h4>Выключить весь свет в доме и во дворе</h4>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_scheduled.svg">
-            <img src="img/icon_scheduled@1x.png" srcset="img/icon_scheduled@2x.png 2x" width="24" height="24" alt="Не активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_scheduled"></use>
+          </svg>
           <h4>Я ухожу</h4>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
-            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_sun_active"></use>
+          </svg>
           <h4>Включить свет в коридоре</h4>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_temperature_inactive.svg">
-            <img src="img/icon_temperature_inactive@1x.png" srcset="img/icon_temperature_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_temperature_inactive"></use>
+          </svg>
           <h4>Набрать горячую ванну</h4>
           <p>Начнётся в 18:00</p>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_temperature_active.svg">
-            <img src="img/icon_temperature_active@1x.png" srcset="img/icon_temperature_active@2x.png 2x" width="24" height="24" alt="Активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_temperature_active"></use>
+          </svg>
           <h4>Сделать пол тёплым во всей квартире</h4>
         </li>
       </ul>
@@ -147,64 +152,64 @@
         </ul>
         <div>
           <button type="button" title="Пролисать назад">
-            <object type="image/svg+xml" data="img/svg/icon_arrow_left.svg">
-              <img src="img/icon_arrow_left@1x.png" srcset="img/icon_arrow_left@2x.png 2x" width="24" height="24" alt="Пролисать назад">
-            </object>
+            <svg width="9" height="14">
+              <use xlink:href="#icon_arrow_left"></use>
+            </svg>
           </button>
           <button type="button" title="Пролисать вперед">
-            <object type="image/svg+xml" data="img/svg/icon_arrow_left.svg">
-              <img src="img/icon_arrow_left@1x.png" srcset="img/icon_arrow_left@2x.png 2x" width="24" height="24" alt="Пролисать вперед">
-            </object>
+            <svg width="9" height="14">
+              <use xlink:href="#icon_arrow_left"></use>
+            </svg>
           </button>
         </div>
       </header>
       <ul>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
-            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_sun_active"></use>
+          </svg>
           <h4>Xiaomi Yeelight LED Smart Bulb</h4>
           <p>Включено</p>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_sun_inactive.svg">
-            <img src="img/icon_sun_inactive@1x.png" srcset="img/icon_sun_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_sun_inactive"></use>
+          </svg>
           <h4>D-Link Omna 180 Cam</h4>
           <p>Включится в 17:00</p>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_temperature_inactive.svg">
-            <img src="img/icon_temperature_inactive@1x.png" srcset="img/icon_temperature_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_temperature_inactive"></use>
+          </svg>
           <h4>Elgato Eve Degree Connected</h4>
           <p>Выключено до 17:00</p>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_sun_inactive.svg">
-            <img src="img/icon_sun_inactive@1x.png" srcset="img/icon_sun_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_sun_inactive"></use>
+          </svg>
           <h4>LIFX Mini Day & Dusk A60 E27</h4>
           <p>Включится в 17:00</p>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
-            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_sun_active"></use>
+          </svg>
           <h4>Xiaomi Mi Air Purifier 2S</h4>
           <p>Включено</p>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_sun_inactive.svg">
-            <img src="img/icon_sun_inactive@1x.png" srcset="img/icon_sun_inactive@2x.png 2x" width="24" height="24" alt="Не активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_sun_inactive"></use>
+          </svg>
           <h4>Philips Zhirui</h4>
           <p>Выключено</p>
         </li>
         <li>
-          <object type="image/svg+xml" data="img/svg/icon_sun_active.svg">
-            <img src="img/icon_sun_active@1x.png" srcset="img/icon_sun_active@2x.png 2x" width="24" height="24" alt="Активно">
-          </object>
+          <svg width="24" height="24">
+            <use xlink:href="#icon_sun_active"></use>
+          </svg>
           <h4>Xiaomi Mi Air Purifier 2S</h4>
           <p>Включено</p>
         </li>
@@ -228,6 +233,92 @@
     </ul>
     <span>© 2001–2017 ООО «Яндекс»</span>
   </footer>
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <path d="M0 3.326a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.681A.995.995 0 0 1 15 5H1c-.552 0-1-.44-1-.993v-.68zM0 8.66a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .993H1c-.552 0-1-.44-1-.993v-.68zm0 5.333A.995.995 0 0 1 1 13h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .994H1c-.552 0-1-.44-1-.993v-.681z" id="a" />
+      </defs>
+      <symbol id="icon_arrow_left" viewBox="0 0 791.966 791.967">
+        <path d="M245.454 396.017L617.077 56.579c12.973-12.94 12.973-33.934 0-46.874-12.973-12.94-34.033-12.94-47.006 0L174.615 370.896c-6.932 6.899-9.87 16.076-9.408 25.087-.462 9.045 2.476 18.188 9.408 25.088l395.456 361.19c12.973 12.94 34.033 12.94 47.006 0 12.973-12.939 12.973-33.934 0-46.873L245.454 396.017z" />
+      </symbol>
+      <symbol id="icon_arrow_up">
+        <path d="M.311 5.944L5.036.59c.335-.38.492-.478.68-.543a.858.858 0 0 1 .568 0c.188.065.345.163.68.543l4.725 5.353a1.32 1.32 0 0 1 0 1.703c-.2.226-.47.353-.752.353H1.063C.476 8 0 7.46 0 6.795c0-.32.112-.626.311-.851z" fill="#333" />
+      </symbol>
+      <symbol id="icon_cloud">
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#F8F8F8" d="M-212-365h1366v768H-212z" />
+          <path d="M0 0h26v26H0z" />
+          <path d="M15 20v2m0-9v2m-5 7v2m0-9v2m11 .58A5 5 0 0 0 19 8h-1.26A8 8 0 1 0 5 16.25" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+        </g>
+      </symbol>
+      <symbol id="icon_double_up_arrow" viewBox="0 0 1792 1792">
+        <path d="M1395 1312q0 13-10 23l-50 50q-10 10-23 10t-23-10L896 992l-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23zm0-384q0 13-10 23l-50 50q-10 10-23 10t-23-10L896 608l-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z" />
+      </symbol>
+      <symbol id="icon_menu_closed">
+        <use fill="#333" xlink:href="#a" transform="translate(0 -2)" fill-rule="evenodd" />
+      </symbol>
+      <symbol id="icon_scheduled">
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#F8F8F8" d="M-925-250H441v768H-925z" />
+          <path d="M0 0h24v24H0z" />
+          <g transform="translate(2 2)" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <circle cx="10" cy="10" r="10" />
+            <path opacity=".3" d="M10 4v6l3 3" />
+          </g>
+        </g>
+      </symbol>
+      <symbol id="icon_sun_active">
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#F8F8F8" d="M-1140-250H226v768h-1366z" />
+          <path d="M0 0h24v24H0z" />
+          <g transform="translate(1 1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <circle stroke="#F5A623" cx="11" cy="11" r="5" />
+            <path d="M11 0v2m0 18v2M3.22 3.22l1.42 1.42m12.72 12.72l1.42 1.42M0 11h2m18 0h2M3.22 18.78l1.42-1.42M17.36 4.64l1.42-1.42" stroke="#FFD93E" />
+          </g>
+        </g>
+      </symbol>
+      <symbol id="icon_sun_inactive">
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#F8F8F8" d="M-464-404H902v768H-464z" />
+          <path d="M0 0h24v24H0z" />
+          <g transform="translate(1 1)" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <circle stroke-opacity=".4" cx="11" cy="11" r="5" />
+            <path d="M11 0v2m0 18v2M3.22 3.22l1.42 1.42m12.72 12.72l1.42 1.42M0 11h2m18 0h2M3.22 18.78l1.42-1.42M17.36 4.64l1.42-1.42" stroke-opacity=".1" />
+          </g>
+        </g>
+      </symbol>
+      <symbol id="icon_sun_max">
+        <g transform="translate(2 2)" stroke="#FFF" stroke-width="3" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="16" cy="16" r="7.273" />
+          <path d="M16 0v2.91m0 26.18V32M4.684 4.684l2.065 2.065M25.25 25.25l2.066 2.066M0 16h2.91m26.18 0H32M4.684 27.316l2.065-2.065M25.25 6.75l2.066-2.066" />
+        </g>
+      </symbol>
+      <symbol id="icon_sun_min">
+        <g transform="translate(3 3)" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="15" cy="15" r="7.273" />
+          <path d="M15 1v.91m0 26.18V29M5 5l.75.75m18.5 18.5L25 25M1 15h.91m26.18 0H29M5 25l.75-.75m18.5-18.5L25 5" />
+        </g>
+      </symbol>
+      <symbol id="icon_temperature_active">
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#F8F8F8" d="M-925-365H441v768H-925z" />
+          <path d="M0 0h24v24H0z" />
+          <g transform="translate(7 1)">
+            <path d="M7 13.76V2.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle fill="#FFD93E" fill-rule="nonzero" cx="4.5" cy="17.5" r="3.5" />
+          </g>
+        </g>
+      </symbol>
+      <symbol id="icon_temperature_inactive">
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#F8F8F8" d="M-464-269H902v768H-464z" />
+          <path d="M0 0h24v24H0z" />
+          <path d="M14 14.76V3.5a2.5 2.5 0 1 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke-opacity=".4" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <circle fill-opacity=".1" fill="#333" fill-rule="nonzero" cx="11.5" cy="18.5" r="3.5" />
+        </g>
+      </symbol>
+    </svg>
+  </div>
 </body>
 
 </html>

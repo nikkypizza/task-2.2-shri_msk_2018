@@ -19,7 +19,7 @@ gulp.task('pngmin', () =>
 )
 
 // Minify SVG
-gulp.task("svgo", function() {
+gulp.task("svgo", function () {
   gulp.src("assets/svg/*.svg")
     .pipe(imagemin([
       imagemin.svgo()
@@ -28,8 +28,11 @@ gulp.task("svgo", function() {
 });
 
 // Genetare SVG sprite from icons starting with "icon-"
-gulp.task("sprite", function() {
-  gulp.src("img/svg/icon-*.svg")
+gulp.task("sprite", function () {
+  gulp.src("img/svg/icon_*.svg")
+    .pipe(imagemin([
+      imagemin.svgo()
+    ]))
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -56,8 +59,8 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 
 // Monitor sass files + sync with local server
-gulp.task('default', ['sass'], function() {
-  browserSync.init(["css/*.css", "js/*.js", "*.html", "sass/*.scss"],{
+gulp.task('default', ['sass'], function () {
+  browserSync.init(["css/*.css", "js/*.js", "*.html", "sass/*.scss"], {
     server: "./"
   });
   gulp.watch("sass/**/*.scss", ['sass']);
@@ -65,7 +68,7 @@ gulp.task('default', ['sass'], function() {
 });
 
 // Convert SCSS to CSS
-gulp.task('sass', function() {
+gulp.task('sass', function () {
   gulp.src('sass/style.scss')
     .pipe(plumber())
     .pipe(sass({ includePaths: ['sass'] }))
