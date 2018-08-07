@@ -1,5 +1,9 @@
 .page-header {
   display: flex;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .page-header__nav-list {
@@ -7,14 +11,15 @@
 }
 
 .page-header__logo {
-  margin: 12px 19px;
+  margin: 12px 19px 0 19px;
 }
 
 .page-header__menu-toggler {
   width: 16px;
   height: 16px;
-  margin: 0 12px 0 auto;
+  margin: 10px 12px 0 auto;
   align-self: center;
+  box-sizing: content-box;
 }
 
 .page-header__nav-list-item {

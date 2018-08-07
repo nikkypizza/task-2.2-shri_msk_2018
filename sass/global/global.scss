@@ -5,9 +5,78 @@ a {
 button {
   cursor: pointer;
   border: none;
+  background-color: transparent;
 }
 
 ul {
   list-style: none;
   padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  min-width: 300px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: $font-color-primary;
+  margin: 30px 0 16px 20px;
+}
+
+.section-title--main {
+  display: none;
+}
+
+.section-scroll-btns {
+  display: none;
+}
+
+.filter-select {
+  appearance: none;
+  text-indent: 5px;
+  height: 30px;
+  width: 19%;
+  font-size: 13px;
+  padding: 0 10px;
+  line-height: 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: #FFD93E;
+  margin: 7px 20px 0 auto;
+  border: none;
+}
+
+.favourites__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.device-list {
+  display: flex;
+  overflow: scroll;
+  margin-bottom: 5px;
+}
+
+.device-list--favourites {
+  margin-top: 3px;
+}
+
+.device-list::-webkit-scrollbar {
+  display: none;
+}
+
+.footer__links {
+  font-size: 12px;
+  line-height: 14px;
+  color: $font-color-secondary;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  line-height: 14px;
+  color: $font-color-secondary;
 }

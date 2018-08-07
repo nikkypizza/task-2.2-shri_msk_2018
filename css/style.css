@@ -391,36 +391,96 @@ template {
 [hidden] {
   display: none; }
 
-@font-face {
-  font-family: "ArialMT";
-  src: url("../fonts/ArialMT.woff") format("woff");
-  font-display: block; }
-
 a {
   text-decoration: none; }
 
 button {
   cursor: pointer;
-  border: none; }
+  border: none;
+  background-color: transparent; }
 
 ul {
   list-style: none;
   padding: 0; }
 
+body {
+  font-family: "Arial", sans-serif;
+  min-width: 300px; }
+
+.section-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  margin: 30px 0 16px 20px; }
+
+.section-title--main {
+  display: none; }
+
+.section-scroll-btns {
+  display: none; }
+
+.filter-select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-indent: 5px;
+  height: 30px;
+  width: 19%;
+  font-size: 13px;
+  padding: 0 10px;
+  line-height: 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: #FFD93E;
+  margin: 7px 20px 0 auto;
+  border: none; }
+
+.favourites__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px; }
+
+.device-list {
+  display: flex;
+  overflow: scroll;
+  margin-bottom: 5px; }
+
+.device-list--favourites {
+  margin-top: 3px; }
+
+.device-list::-webkit-scrollbar {
+  display: none; }
+
+.footer__links {
+  font-size: 12px;
+  line-height: 14px;
+  color: #858585; }
+
+.footer__copyright {
+  font-size: 12px;
+  line-height: 14px;
+  color: #858585; }
+
 .page-header {
-  display: flex; }
+  display: flex;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; }
 
 .page-header__nav-list {
   display: none; }
 
 .page-header__logo {
-  margin: 12px 19px; }
+  margin: 12px 19px 0 19px; }
 
 .page-header__menu-toggler {
   width: 16px;
   height: 16px;
-  margin: 0 12px 0 auto;
-  align-self: center; }
+  margin: 10px 12px 0 auto;
+  align-self: center;
+  box-sizing: content-box; }
 
 .page-header__nav-list-item {
   margin: 26px 26px 26px 0; }
@@ -432,3 +492,98 @@ ul {
     margin: 26px 49px 33px 40px; }
   .page-header__nav-list-item {
     margin: 26px 26px 26px 0; } }
+
+.greetings {
+  background-color: #EBE8E3;
+  background-repeat: no-repeat;
+  height: 282px;
+  width: 89.3%;
+  border-radius: 20px;
+  margin: 12px 5%;
+  background-image: url("../img/greeetings_bg@1x.png");
+  background-size: cover; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .greetings {
+    background-image: url("../img/greeetings_bg@2x.png"); } }
+
+.greetings__info-wrapper {
+  padding: 6px 0 6px 20px; }
+
+.greetings__title {
+  color: #333333;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 0;
+  font-weight: bold; }
+
+.greetings__subtitle {
+  line-height: 14px;
+  font-size: 12px;
+  margin: 4px 0 15px 0;
+  color: #333333; }
+
+.greetings__temperature-wrapper {
+  display: flex; }
+
+.greetings__temperature {
+  display: flex;
+  flex-direction: column;
+  padding-right: 19px; }
+
+.greetings__temperature-subtitle--icon::after {
+  content: url("../img/svg/icon_cloud.svg");
+  margin-left: 5px; }
+
+.greetings__temperature-title {
+  line-height: 14px;
+  font-size: 12px;
+  color: #858585; }
+
+.greetings__temperature-subtitle {
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  padding-top: 5px; }
+
+.greetings__btn-show-more {
+  display: none; }
+
+.device-card {
+  min-width: 200px;
+  height: 100px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  margin: 0 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.device-card__icon {
+  padding: 17px 0 0 12px; }
+
+.device-card__icon--xl {
+  padding: 10px 0 0 13px; }
+
+.device-card__text {
+  padding: 0 0 12px 16px; }
+
+.device-card__text-title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  color: #333333;
+  max-width: 170px;
+  margin: 0; }
+
+.device-card__text-subtitle {
+  font-size: 12px;
+  line-height: 14px;
+  color: #858585;
+  padding-top: 4px;
+  margin: 0; }
+
+.device-card--xl {
+  height: 115px;
+  margin: 0 0 0 20px; }

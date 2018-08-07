@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Яндекс.Дом</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -14,7 +15,7 @@
       <img src="img/svg/ya_logo.svg" width="113" height="38" alt="Яндекс.Дом">
     </a>
     <button type="button" class="page-header__menu-toggler" title="Открыть меню">
-      <svg width="16" height="16">
+      <svg width="16" height="14">
         <use xlink:href="#icon_menu_closed"></use>
       </svg>
     </button>
@@ -34,51 +35,53 @@
   </header>
   <main>
     <section>
-      <h3>Главное</h3>
-      <article>
-        <div>
-          <h2>Привет, Геннадий!</h2>
-          <p>Двери и окна закрыты, сигнализация включена.</p>
-          <div>
-            <div>
-              <span>Дома</span>
-              <span>+23</span>
+      <h3 class="section-title section-title--main">Главное</h3>
+      <article class="greetings">
+        <div class="greetings__info-wrapper">
+          <h2 class="greetings__title">Привет, Геннадий!</h2>
+          <p class="greetings__subtitle">Двери и окна закрыты, сигнализация включена.</p>
+          <div class="greetings__temperature-wrapper">
+            <div class="greetings__temperature">
+              <span class="greetings__temperature-title">Дома</span>
+              <span class="greetings__temperature-subtitle">+23</span>
             </div>
-            <div>
-              <span>За окном</span>
-              <span>+19</span>
+            <div class="greetings__temperature">
+              <span class="greetings__temperature-title">За окном</span>
+              <span class="greetings__temperature-subtitle greetings__temperature-subtitle--icon">+19</span>
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <svg width="24" height="24">
+        <ul class="device-list">
+          <li class="device-card device-card--xl">
+            <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
               <use xlink:href="#icon_temperature_inactive"></use>
             </svg>
-            <h4>Philips Cooler</h4>
-            <p>Начнет охлаждать в 16:30</p>
-          </div>
-          <div>
-            <svg width="24" height="24">
+            <div class="device-card__text">
+              <h4 class="device-card__text-title">Philips Cooler</h4>
+              <p class="device-card__text-subtitle">Начнет охлаждать в 16:30</p>
+            </div>
+          </li>
+          <li class="device-card device-card--xl">
+            <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
               <use xlink:href="#icon_sun_inactive"></use>
             </svg>
-            <h4>Xiaomi Yeelight LED Smart Bulb</h4>
-            <p>Включится в 17:00</p>
-          </div>
-          <div>
-            <button type="button" title="Показать еще">
-              <svg width="16" height="16">
-                <use xlink:href="#icon_double_up_arrow"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
+            <div class="device-card__text">
+              <h4 class="device-card__text-title">Xiaomi Yeelight LED Smart Bulb</h4>
+              <p class="device-card__text-subtitle">Включится в 17:00</p>
+            </div>
+          </li>
+        </ul>
+        <button class="greetings__btn-show-more" type="button" title="Показать еще">
+          <svg width="16" height="16">
+            <use xlink:href="#icon_double_up_arrow"></use>
+          </svg>
+        </button>
       </article>
     </section>
     <section>
       <header>
-        <h3>Избранные сценарии</h3>
-        <div>
+        <h3 class="section-title">Избранные сценарии</h3>
+        <div class="section-scroll-btns">
           <button type="button" title="Пролисать назад">
             <svg width="9" height="14">
               <use xlink:href="#icon_arrow_left"></use>
@@ -91,44 +94,61 @@
           </button>
         </div>
       </header>
-      <ul>
-        <li>
-          <svg width="24" height="24">
+      <ul class="device-list">
+        <li class="device-card">
+          <svg class="device-card__icon" width="24" height="24">
             <use xlink:href="#icon_sun_active"></use>
           </svg>
-          <h4>Выключить весь свет в доме и во дворе</h4>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Выключить весь свет в доме и во дворе</h4>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card">
+          <svg class="device-card__icon" width="24" height="24">
             <use xlink:href="#icon_scheduled"></use>
           </svg>
-          <h4>Я ухожу</h4>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Я ухожу</h4>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card">
+          <svg class="device-card__icon" width="24" height="24">
             <use xlink:href="#icon_sun_active"></use>
           </svg>
-          <h4>Включить свет в коридоре</h4>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Включить свет в коридоре</h4>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card">
+          <svg class="device-card__icon" width="24" height="24">
             <use xlink:href="#icon_temperature_inactive"></use>
           </svg>
-          <h4>Набрать горячую ванну</h4>
-          <p>Начнётся в 18:00</p>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Набрать горячую ванну</h4>
+            <p class="device-card__text-subtitle">Начнётся в 18:00</p>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card">
+          <svg class="device-card__icon" width="24" height="24">
             <use xlink:href="#icon_temperature_active"></use>
           </svg>
-          <h4>Сделать пол тёплым во всей квартире</h4>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Сделать пол тёплым во всей квартире</h4>
+          </div>
         </li>
       </ul>
     </section>
-    <section>
-      <header>
-        <h3>Избранные устройства</h3>
-        <ul>
+    <section class="favourites">
+      <header class="favourites__header">
+        <h3 class="section-title">Избранные устройства</h3>
+        <select class="filter-select">
+          <option selected>Все</option>
+          <option>Кухня</option>
+          <option>Зал</option>
+          <option>Лампочки</option>
+          <option>Камеры</option>
+        </select>
+        <!-- <ul>
           <li>
             <input type="radio" name="device_categories" value="Все" id="radio-select-all" checked>
             <label for="radio-select-all">Все</label>
@@ -149,8 +169,8 @@
             <input type="radio" name="device_categories" value="Все" id="radio-select-cameras">
             <label for="radio-select-cameras">Камеры</label>
           </li>
-        </ul>
-        <div>
+        </ul> -->
+        <div class="section-scroll-btns">
           <button type="button" title="Пролисать назад">
             <svg width="9" height="14">
               <use xlink:href="#icon_arrow_left"></use>
@@ -163,61 +183,75 @@
           </button>
         </div>
       </header>
-      <ul>
-        <li>
-          <svg width="24" height="24">
+      <ul class="device-list device-list--favourites">
+        <li class="device-card device-card--xl">
+          <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
             <use xlink:href="#icon_sun_active"></use>
           </svg>
-          <h4>Xiaomi Yeelight LED Smart Bulb</h4>
-          <p>Включено</p>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Xiaomi Yeelight LED Smart Bulb</h4>
+            <p class="device-card__text-subtitle">Включено</p>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card device-card--xl">
+          <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
             <use xlink:href="#icon_sun_inactive"></use>
           </svg>
-          <h4>D-Link Omna 180 Cam</h4>
-          <p>Включится в 17:00</p>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">D-Link Omna 180 Cam</h4>
+            <p class="device-card__text-subtitle">Включится в 17:00</p>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card device-card--xl">
+          <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
             <use xlink:href="#icon_temperature_inactive"></use>
           </svg>
-          <h4>Elgato Eve Degree Connected</h4>
-          <p>Выключено до 17:00</p>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Elgato Eve Degree Connected</h4>
+            <p class="device-card__text-subtitle">Выключено до 17:00</p>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card device-card--xl">
+          <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
             <use xlink:href="#icon_sun_inactive"></use>
           </svg>
-          <h4>LIFX Mini Day & Dusk A60 E27</h4>
-          <p>Включится в 17:00</p>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">LIFX Mini Day & Dusk A60 E27</h4>
+            <p class="device-card__text-subtitle">Включится в 17:00</p>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card device-card--xl">
+          <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
             <use xlink:href="#icon_sun_active"></use>
           </svg>
-          <h4>Xiaomi Mi Air Purifier 2S</h4>
-          <p>Включено</p>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Xiaomi Mi Air Purifier 2S</h4>
+            <p class="device-card__text-subtitle">Включено</p>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card device-card--xl">
+          <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
             <use xlink:href="#icon_sun_inactive"></use>
           </svg>
-          <h4>Philips Zhirui</h4>
-          <p>Выключено</p>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Philips Zhirui</h4>
+            <p class="device-card__text-subtitle">Выключено</p>
+          </div>
         </li>
-        <li>
-          <svg width="24" height="24">
+        <li class="device-card device-card--xl">
+          <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
             <use xlink:href="#icon_sun_active"></use>
           </svg>
-          <h4>Xiaomi Mi Air Purifier 2S</h4>
-          <p>Включено</p>
+          <div class="device-card__text">
+            <h4 class="device-card__text-title">Xiaomi Mi Air Purifier 2S</h4>
+            <p class="device-card__text-subtitle">Включено</p>
+          </div>
         </li>
       </ul>
     </section>
   </main>
-  <footer>
-    <ul>
+  <footer class="footer">
+    <ul class="footer__links">
       <li>
         <a href="#">Помощь</a>
       </li>
@@ -231,7 +265,7 @@
         <a href="#">Условия использования</a>
       </li>
     </ul>
-    <span>© 2001–2017 ООО «Яндекс»</span>
+    <span class="footer__copyright">© 2001–2017 ООО «Яндекс»</span>
   </footer>
   <div>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -246,7 +280,7 @@
       </symbol>
       <symbol id="icon_cloud">
         <g fill="none" fill-rule="evenodd">
-          <path fill="#F8F8F8" d="M-212-365h1366v768H-212z" />
+          <path d="M-212-365h1366v768H-212z" />
           <path d="M0 0h26v26H0z" />
           <path d="M15 20v2m0-9v2m-5 7v2m0-9v2m11 .58A5 5 0 0 0 19 8h-1.26A8 8 0 1 0 5 16.25" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
         </g>
@@ -269,7 +303,7 @@
       </symbol>
       <symbol id="icon_sun_active">
         <g fill="none" fill-rule="evenodd">
-          <path fill="#F8F8F8" d="M-1140-250H226v768h-1366z" />
+          <path d="M-1140-250H226v768h-1366z" />
           <path d="M0 0h24v24H0z" />
           <g transform="translate(1 1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <circle stroke="#F5A623" cx="11" cy="11" r="5" />
@@ -279,7 +313,7 @@
       </symbol>
       <symbol id="icon_sun_inactive">
         <g fill="none" fill-rule="evenodd">
-          <path fill="#F8F8F8" d="M-464-404H902v768H-464z" />
+          <path d="M-464-404H902v768H-464z" />
           <path d="M0 0h24v24H0z" />
           <g transform="translate(1 1)" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <circle stroke-opacity=".4" cx="11" cy="11" r="5" />
@@ -301,7 +335,7 @@
       </symbol>
       <symbol id="icon_temperature_active">
         <g fill="none" fill-rule="evenodd">
-          <path fill="#F8F8F8" d="M-925-365H441v768H-925z" />
+          <path d="M-925-365H441v768H-925z" />
           <path d="M0 0h24v24H0z" />
           <g transform="translate(7 1)">
             <path d="M7 13.76V2.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -311,7 +345,7 @@
       </symbol>
       <symbol id="icon_temperature_inactive">
         <g fill="none" fill-rule="evenodd">
-          <path fill="#F8F8F8" d="M-464-269H902v768H-464z" />
+          <path d="M-464-269H902v768H-464z" />
           <path d="M0 0h24v24H0z" />
           <path d="M14 14.76V3.5a2.5 2.5 0 1 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke-opacity=".4" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           <circle fill-opacity=".1" fill="#333" fill-rule="nonzero" cx="11.5" cy="18.5" r="3.5" />
@@ -319,6 +353,25 @@
       </symbol>
     </svg>
   </div>
+  <script>
+//  var list = document.querySelectorAll('.device-list');
+ // var scrollHorizontally = function (e) {
+   // e = window.event || e;
+    //var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+  //   list.forEach(function (el) { 
+  //     el.scrollLeft -= (delta * 40) }); // Multiplied by 40
+  //   e.preventDefault();
+  // };
+
+  // document.addEventListener("mousewheel", (evt) => {
+  //   evt.target.addEventListener("mousewheel", scrollHorizontally, false);
+  // })
+  // list.forEach(function (el) {
+  //   el.addEventListener("mousewheel", scrollHorizontally, false);
+  //   el.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+  // })
+
+  </script>
 </body>
 
 </html>

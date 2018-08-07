@@ -1,0 +1,70 @@
+.greetings {
+  background-color: #EBE8E3;
+  background-repeat: no-repeat;
+  height: 282px;
+  width: 89.3%;
+  border-radius: 20px;
+  margin: 12px 5%; //???
+  background-image: url("../img/greeetings_bg@1x.png");
+  background-size: cover;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution:144dpi),
+(min-resolution:1.5dppx) {
+  .greetings {
+    background-image: url("../img/greeetings_bg@2x.png");
+  }
+}
+
+.greetings__info-wrapper {
+  padding: 6px 0 6px 20px;
+}
+
+.greetings__title {
+  color: $font-color-primary;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.greetings__subtitle {
+  line-height: 14px;
+  font-size: 12px;
+  margin: 4px 0 15px 0;
+  color: $font-color-primary;
+}
+
+.greetings__temperature-wrapper {
+  display: flex;
+}
+
+.greetings__temperature {
+  display: flex;
+  flex-direction: column;
+  padding-right: 19px;
+}
+
+.greetings__temperature-subtitle--icon::after {
+  content: url("../img/svg/icon_cloud.svg");
+  margin-left: 5px;
+}
+
+.greetings__temperature-title {
+  line-height: 14px;
+  font-size: 12px;
+  color: $font-color-secondary;
+}
+
+.greetings__temperature-subtitle {
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: bold;
+  color: $font-color-primary;
+  padding-top: 5px;
+}
+
+.greetings__btn-show-more {
+  display: none;
+}
