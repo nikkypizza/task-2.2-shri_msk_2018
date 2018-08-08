@@ -141,7 +141,7 @@
     <section class="favourites">
       <header class="favourites__header">
         <h3 class="section-title">Избранные устройства</h3>
-        <select class="filter-select">
+        <select class="filter-select" onchange="this.blur();" onblur="this.style.width='96px';">
           <option selected>Все</option>
           <option>Кухня</option>
           <option>Зал</option>
@@ -267,7 +267,7 @@
     </ul>
     <span class="footer__copyright">© 2001–2017 ООО «Яндекс»</span>
   </footer>
-  <div>
+  <div style="display:none">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <path d="M0 3.326a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.681A.995.995 0 0 1 15 5H1c-.552 0-1-.44-1-.993v-.68zM0 8.66a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .993H1c-.552 0-1-.44-1-.993v-.68zm0 5.333A.995.995 0 0 1 1 13h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .994H1c-.552 0-1-.44-1-.993v-.681z" id="a" />
@@ -353,25 +353,38 @@
       </symbol>
     </svg>
   </div>
-  <script>
-//  var list = document.querySelectorAll('.device-list');
- // var scrollHorizontally = function (e) {
-   // e = window.event || e;
-    //var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-  //   list.forEach(function (el) { 
-  //     el.scrollLeft -= (delta * 40) }); // Multiplied by 40
-  //   e.preventDefault();
-  // };
-
-  // document.addEventListener("mousewheel", (evt) => {
-  //   evt.target.addEventListener("mousewheel", scrollHorizontally, false);
-  // })
-  // list.forEach(function (el) {
-  //   el.addEventListener("mousewheel", scrollHorizontally, false);
-  //   el.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-  // })
-
-  </script>
+  <template>
+    <div class="modal">
+      <div class="modal__content">
+        <div class="modal__device">
+          <div class="modal__text">
+            <h4 class="modal__text-title">Elgato Eve Degree Connected</h4>
+            <p class="modal__text-subtitle">Включено</p>
+            <ul class="modal__text-radio-container">
+              <li>
+                <input type="radio" name="device_categories" value="Вручную" id="radio-select-all" checked>
+                <label for="radio-select-all">Вручную</label>
+              </li>
+              <li>
+                <input type="radio" name="device_categories" value="Холодно" id="radio-select-kitchen">
+                <label for="radio-select-kitchen">Холодно</label>
+              </li>
+              <li>
+                <input type="radio" name="device_categories" value="Тепло" id="radio-select-hall">
+                <label for="radio-select-hall">Тепло</label>
+              </li>
+            </ul>
+          </div>
+          <input class="modal__range-input" type="range" min="-10" max="30" value="16" step="1" id="rangeInput" oninput="output.value = rangeInput.value">
+          <output class="modal__range-output" id="output" for="rangeInput">15</output>
+          <!-- <input class="modal__range-input" id="modal__range-input" type="range" min="-10" max="30" oninput="output.value = modal__range-input.value"> -->
+          <!-- <output id="output" for="modal__range-input">10</output> -->
+        </div>
+        <button type="button" class="modal__btn modal__btn--submit">Применить</button>
+        <button type="button" class="modal__btn">Закрыть</button>
+      </div>
+    </div>
+  </template>
 </body>
 
 </html>

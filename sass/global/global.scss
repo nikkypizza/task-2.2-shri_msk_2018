@@ -3,6 +3,7 @@ a {
 }
 
 button {
+  font-family: "Arial", sans-serif;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -44,7 +45,7 @@ body {
   line-height: 15px;
   font-weight: bold;
   border-radius: 50px;
-  background-color: #FFD93E;
+  background-color: $contrast-color;
   margin: 7px 20px 0 auto;
   border: none;
 }
@@ -57,7 +58,8 @@ body {
 
 .device-list {
   display: flex;
-  overflow: scroll;
+  overflow-x: hidden; //Тут
+  overflow-y: hidden;
   margin-bottom: 5px;
 }
 
