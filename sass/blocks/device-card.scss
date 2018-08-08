@@ -1,12 +1,12 @@
 .device-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   min-width: 200px;
   height: 100px;
-  background-color: #f7f7f7;
-  border-radius: 20px;
   margin: 0 0 0 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius: 20px;
+  background-color: #f7f7f7;
 }
 
 .device-card__icon {
@@ -25,17 +25,17 @@
   font-size: 14px;
   font-weight: bold;
   line-height: 16px;
-  color: $font-color-primary;
   max-width: 170px;
   margin: 0;
+  color: $font-color-primary;
 }
 
 .device-card__text-subtitle {
   font-size: 12px;
   line-height: 14px;
-  color: $font-color-secondary;
-  padding-top: 4px;
   margin: 0;
+  padding-top: 4px;
+  color: $font-color-secondary;
 }
 
 .device-card--xl {

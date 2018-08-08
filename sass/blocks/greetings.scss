@@ -1,11 +1,11 @@
 .greetings {
-  background-color: #EBE8E3;
-  background-repeat: no-repeat;
-  height: 282px;
   width: 89.3%;
-  border-radius: 20px;
+  height: 282px;
   margin: 12px 5%; //???
+  border-radius: 20px;
+  background-color: #ebe8e3;
   background-image: url("../img/greeetings_bg@1x.png");
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -22,16 +22,16 @@
 }
 
 .greetings__title {
-  color: $font-color-primary;
   font-size: 18px;
+  font-weight: bold;
   line-height: 21px;
   margin-bottom: 0;
-  font-weight: bold;
+  color: $font-color-primary;
 }
 
 .greetings__subtitle {
-  line-height: 14px;
   font-size: 12px;
+  line-height: 14px;
   margin: 4px 0 15px 0;
   color: $font-color-primary;
 }
@@ -47,22 +47,22 @@
 }
 
 .greetings__temperature-subtitle--icon::after {
-  content: url("../img/svg/icon_cloud.svg");
   margin-left: 5px;
+  content: url("../img/svg/icon_cloud.svg");
 }
 
 .greetings__temperature-title {
-  line-height: 14px;
   font-size: 12px;
+  line-height: 14px;
   color: $font-color-secondary;
 }
 
 .greetings__temperature-subtitle {
-  line-height: 28px;
   font-size: 24px;
   font-weight: bold;
-  color: $font-color-primary;
+  line-height: 28px;
   padding-top: 5px;
+  color: $font-color-primary;
 }
 
 .greetings__btn-show-more {

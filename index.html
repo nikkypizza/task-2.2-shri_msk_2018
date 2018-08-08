@@ -353,38 +353,40 @@
       </symbol>
     </svg>
   </div>
-  <template>
-    <div class="modal">
-      <div class="modal__content">
-        <div class="modal__device">
-          <div class="modal__text">
-            <h4 class="modal__text-title">Elgato Eve Degree Connected</h4>
-            <p class="modal__text-subtitle">Включено</p>
-            <ul class="modal__text-radio-container">
-              <li>
-                <input type="radio" name="device_categories" value="Вручную" id="radio-select-all" checked>
-                <label for="radio-select-all">Вручную</label>
-              </li>
-              <li>
-                <input type="radio" name="device_categories" value="Холодно" id="radio-select-kitchen">
-                <label for="radio-select-kitchen">Холодно</label>
-              </li>
-              <li>
-                <input type="radio" name="device_categories" value="Тепло" id="radio-select-hall">
-                <label for="radio-select-hall">Тепло</label>
-              </li>
-            </ul>
-          </div>
-          <input class="modal__range-input" type="range" min="-10" max="30" value="16" step="1" id="rangeInput" oninput="output.value = rangeInput.value">
-          <output class="modal__range-output" id="output" for="rangeInput">15</output>
-          <!-- <input class="modal__range-input" id="modal__range-input" type="range" min="-10" max="30" oninput="output.value = modal__range-input.value"> -->
-          <!-- <output id="output" for="modal__range-input">10</output> -->
+  <div class="modal">
+    <div class="modal__content">
+      <div class="modal__device">
+        <div class="modal__text">
+          <h4 class="modal__text-title">Elgato Eve Degree Connected</h4>
+          <p class="modal__text-subtitle">Включено</p>
+          <ul class="modal__text-radio-container">
+            <li>
+              <input type="radio" name="device_categories" value="Вручную" id="radio-select-all" checked>
+              <label for="radio-select-all">Вручную</label>
+            </li>
+            <li>
+              <input type="radio" name="device_categories" value="Холодно" id="radio-select-kitchen">
+              <label for="radio-select-kitchen">Холодно</label>
+            </li>
+            <li>
+              <input type="radio" name="device_categories" value="Тепло" id="radio-select-hall">
+              <label for="radio-select-hall">Тепло</label>
+            </li>
+          </ul>
         </div>
-        <button type="button" class="modal__btn modal__btn--submit">Применить</button>
-        <button type="button" class="modal__btn">Закрыть</button>
+        <div class="modal__slider-container">
+          <canvas width="221" height="221"></canvas>
+          <input class="modal__slider modal__slider--light" type="range" min="-10" max="30" value="16" step="1" id="rangeInput" oninput="output.value = rangeInput.value">
+          <output class="modal__slider-output" id="output" for="rangeInput">15</output>
+          <span class="modal__slider-icon modal__slider-icon--top"></span>
+          <span class="modal__slider-icon modal__slider-icon--bottom"></span>
+        </div>
       </div>
+      <button type="button" class="modal__btn modal__btn--submit">Применить</button>
+      <button type="button" class="modal__btn">Закрыть</button>
     </div>
-  </template>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
