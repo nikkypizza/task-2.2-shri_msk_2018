@@ -1,0 +1,41 @@
+.page-header {
+  position: -webkit-sticky;
+  position:         sticky;
+  top: 0;
+  display: flex;
+  background-color: white;
+}
+
+.page-header__nav-list {
+  display: none;
+}
+
+.page-header__logo {
+  margin: 12px 19px 0 19px;
+}
+
+.page-header__menu-toggler {
+  align-self: center;
+  box-sizing: content-box;
+  width: 16px;
+  height: 16px;
+  margin: 10px 12px 0 auto;
+}
+
+.page-header__nav-list-item {
+  margin: 26px 26px 26px 0;
+}
+
+@media ($tablet-width) {
+  .page-header {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .page-header__logo {
+    margin: 26px 49px 33px 40px;
+  }
+
+  .page-header__nav-list-item {
+    margin: 26px 26px 26px 0;
+  }
+}

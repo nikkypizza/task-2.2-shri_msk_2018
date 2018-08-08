@@ -1,0 +1,91 @@
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: "Arial", sans-serif;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  min-width: 300px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  margin: 30px 0 16px 20px;
+  color: $font-color-primary;
+}
+
+.section-title--main {
+  display: none;
+}
+
+.section-scroll-btns {
+  display: none;
+}
+
+.filter-select {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 15px;
+  width: 19%;
+  height: 30px;
+  margin: 7px 20px 0 auto;
+  padding: 0 10px;
+  text-indent: 5px;
+  border: none;
+  border-radius: 50px;
+  background-color: $contrast-color;
+
+  appearance: none;
+}
+
+.favourites__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.device-list {
+  display: flex;
+  overflow-x: hidden; //Тут
+  overflow-y: hidden;
+  margin-bottom: 5px;
+}
+
+.device-list--favourites {
+  margin-top: 3px;
+}
+
+.device-list::-webkit-scrollbar {
+  display: none;
+}
+
+.footer__links {
+  font-size: 12px;
+  line-height: 14px;
+  color: $font-color-secondary;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  line-height: 14px;
+  color: $font-color-secondary;
+}
+
+canvas {
+  position: absolute;
+  top: 29px;
+  right: 55px;
+}

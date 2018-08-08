@@ -1,0 +1,182 @@
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none; // flex
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(51, 51, 51, .5);
+}
+
+.modal__content {
+  position: absolute; // padding: 30px;
+  top: 23px; // border-radius: 30px;
+  display: flex;
+  justify-content: space-between; // box-shadow: 0 5px 15px 3px $shadow-color;
+  flex-direction: column;
+  width: 334px; //89% 334px
+  height: 642px;
+}
+
+.modal__device {
+  width: 100%;
+  height: 492px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.modal__text {
+  padding: 0 0 0 20px;
+  color: $font-color-primary;
+}
+
+.modal__text-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  margin: 21px 0 0 0;
+}
+
+.modal__text-subtitle {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 4px 0 0 0;
+}
+
+.modal__text-radio-container {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden; // Тут
+  height: 50px;
+  margin-top: 5px;
+
+  & li label {
+    font-size: 13px;
+    margin-right: 12px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background-color: #f2f1f0;
+  }
+
+  & li input {
+    position: absolute;
+    opacity: 0;
+
+    &:checked + label {
+      background-color: $contrast-color;
+    }
+  }
+}
+
+.modal__btn {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  padding: 19px 0;
+  border-radius: 20px;
+  background-color: white;
+
+  &--submit {
+    background-color: $contrast-color;
+  }
+}
+
+.modal__slider-output {
+  display: none;
+}
+
+.modal__slider-container {
+  position: relative;
+  height: 336px;
+}
+
+.modal__slider-icon {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  color: white;
+  background-image: url("../img/svg/icon_sun_max.svg");
+  // Стили для modal__slider--light
+  &--top {
+    top: 12px;
+    right: 44.3%;
+  }
+
+  &--bottom {
+    right: 44.3%;
+    bottom: 14px;
+  }
+
+  // Стили для modal__slider--temp
+  //   &--top {
+  //   top: 16px
+  //   right: 43.5%
+  // }
+
+  // &--bottom {
+  //   right: 43.5%
+  //   bottom: 0;
+}
+
+
+//     filter: blur(5px);
+.modal__slider {
+  width: 336px;
+  height: 60px;
+  margin: 138px 0 0 0;
+  transform: rotate(-90deg);
+  border-radius: 35px;
+  background-color: $contrast-color;
+
+  -webkit-appearance: none;
+
+  &--temp {
+    background-image: linear-gradient(90deg, #068fff 0%, #ffd800 50%, #f76b1c 100%);
+  }
+
+  &--light {
+    background-image: linear-gradient(90deg, #ffe88c 0%, #ffb100 100%);
+  }
+
+  &::-webkit-slider-thumb {
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(33, 33, 33, .1); // Внутренний бордер
+    border-radius: 30px;
+    box-shadow: 0 0 0 4px white; // Внешний бордер
+
+    -webkit-appearance: none;
+  }
+
+  &::-moz-range-track {
+    width: 0; // Прячет полосу прокрутки
+  }
+
+  &::-moz-range-thumb {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    border: 3px solid rgba(33, 33, 33, .1); // Внутренний бордер
+    border-radius: 40px;
+    background: transparent;
+    box-shadow: 0 0 0 4px white; // Внешний бордер
+  }
+
+  &::-ms-thumb {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    border: 3px solid rgba(33, 33, 33, .1); // Внутренний бордер
+    border-radius: 40px;
+    background: transparent;
+    box-shadow: 0 0 0 4px white; // Внешний бордер
+  }
+  //Псевдоэлементы мешают полному скроллу так как добавляются внутрь родителя
+}
