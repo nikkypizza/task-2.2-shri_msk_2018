@@ -1,4 +1,5 @@
 .device-card {
+  transition: 0.1s linear;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -7,6 +8,14 @@
   margin: 0 0 0 18px;
   border-radius: 20px;
   background-color: #f7f7f7;
+  cursor: pointer;
+
+  &:hover {
+    @include device-card-hover;
+  }
+  &:active {
+    @include device-card-active;
+  }
 }
 
 .device-card__icon {

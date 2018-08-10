@@ -49,7 +49,7 @@
 .modal__text-radio-container {
   display: flex;
   align-items: center;
-  overflow-x: hidden; // Тут
+  overflow-x: hidden;
   height: 50px;
   margin-top: 5px;
 
@@ -59,14 +59,27 @@
     padding: 7px 15px;
     border-radius: 20px;
     background-color: #f2f1f0;
+
+    &:hover {
+      @include device-card-hover;
+    }
+    &:active {
+      @include device-card-active;
+    }
   }
 
   & li input {
     position: absolute;
     opacity: 0;
 
-    &:checked + label {
+    &:checked+label {
       background-color: $contrast-color;
+      &:hover {
+        background-color: $contrast-color-hover;
+      }
+      &:active {
+        background-color: $contrast-color-active;
+      }
     }
   }
 }
@@ -81,6 +94,22 @@
 
   &--submit {
     background-color: $contrast-color;
+
+    &:hover {
+      background-color: $contrast-color-hover;
+    }
+
+    &:active {
+      background-color: $contrast-color-active;
+    }
+  }
+  &--close {
+    &:hover {
+      @include device-card-hover;
+    }
+    &:active {
+      @include device-card-active;
+    }
   }
 }
 
@@ -101,32 +130,27 @@
   display: block;
   width: 36px;
   height: 36px;
-  color: white;
-  background-image: url("../img/svg/icon_sun_max.svg");
-  // Стили для modal__slider--light
+  color: white; // Стили для modal__slider--light
   &--top {
     top: 12px;
     right: 44.3%;
+    background-image: url("../img/svg/icon-sun_max.svg");
   }
 
   &--bottom {
     right: 44.3%;
     bottom: 14px;
-  }
-
-  // Стили для modal__slider--temp
+    background-image: url("../img/svg/icon-sun_min.svg");
+  } // Стили для modal__slider--temp
   //   &--top {
   //   top: 16px
   //   right: 43.5%
   // }
-
   // &--bottom {
   //   right: 43.5%
   //   bottom: 0;
 }
 
-
-//     filter: blur(5px);
 .modal__slider {
   width: 336px;
   height: 60px;
@@ -134,6 +158,7 @@
   transform: rotate(-90deg);
   border-radius: 35px;
   background-color: $contrast-color;
+  cursor: pointer;
 
   -webkit-appearance: none;
 
@@ -151,7 +176,6 @@
     border: 3px solid rgba(33, 33, 33, .1); // Внутренний бордер
     border-radius: 30px;
     box-shadow: 0 0 0 4px white; // Внешний бордер
-
     -webkit-appearance: none;
   }
 
@@ -160,23 +184,17 @@
   }
 
   &::-moz-range-thumb {
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    border: 3px solid rgba(33, 33, 33, .1); // Внутренний бордер
-    border-radius: 40px;
-    background: transparent;
-    box-shadow: 0 0 0 4px white; // Внешний бордер
+    @include moz-ms-slider-thumb;
   }
 
   &::-ms-thumb {
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    border: 3px solid rgba(33, 33, 33, .1); // Внутренний бордер
-    border-radius: 40px;
-    background: transparent;
-    box-shadow: 0 0 0 4px white; // Внешний бордер
+    @include moz-ms-slider-thumb;
   }
-  //Псевдоэлементы мешают полному скроллу так как добавляются внутрь родителя
+
+  &:disabled {
+    filter: grayscale(30%);
+    // Мне показалось логичным, что если есть опция "вручную", то остальные
+    // кнопки должны отключать возможность редактирования инпута,
+    // но это не точно
+  }
 }

@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px auto;
+  max-width: 500px;
+
+  flex-wrap: wrap;
+
+  & li {
+    margin: 0 15px 5px 20px;
+  }
+
+  & li a {
+    font-size: 12px;
+    line-height: 14px;
+    color: $font-color-secondary;
+  }
+}
+
+.footer__copyright {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0 auto 15px auto;
+  color: $font-color-secondary;
+}

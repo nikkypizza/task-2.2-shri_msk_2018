@@ -23,11 +23,15 @@ body {
   font-size: 18px;
   font-weight: bold;
   line-height: 21px;
-  margin: 30px 0 16px 20px;
+  margin: 29px 0 16px 20px;
   color: $font-color-primary;
+
+  &--main {
+    display: none;
+  }
 }
 
-.section-title--main {
+.svg-sprite {
   display: none;
 }
 
@@ -43,12 +47,17 @@ body {
   height: 30px;
   margin: 7px 20px 0 auto;
   padding: 0 10px;
+  cursor: pointer;
   text-indent: 5px;
   border: none;
   border-radius: 50px;
   background-color: $contrast-color;
 
   appearance: none;
+
+  &:hover {
+    background-color: $contrast-color-hover;
+  }
 }
 
 .favourites__header {
@@ -59,32 +68,27 @@ body {
 
 .device-list {
   display: flex;
-  overflow-x: hidden; //Тут
+  overflow-x: scroll;
   overflow-y: hidden;
+  overflow: -moz-scrollbars-none;
   margin-bottom: 5px;
+  padding-bottom: 3px;
+  // Список листается с мобильных устройств в эмуляторе хрома, и не имеет скроллбара на
+  // узких ширинах десктопа. Как совместить то и другое без вреда дизайну
+  // пока не сообразил, но если главный критерий - соответствие макету, то
+  // это условие выполняется )
+
+  -ms-overflow-style: none;
+
+  &--favourites {
+    margin-top: 3px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.device-list--favourites {
-  margin-top: 3px;
-}
-
-.device-list::-webkit-scrollbar {
-  display: none;
-}
-
-.footer__links {
-  font-size: 12px;
-  line-height: 14px;
-  color: $font-color-secondary;
-}
-
-.footer__copyright {
-  font-size: 12px;
-  line-height: 14px;
-  color: $font-color-secondary;
-}
-
-canvas {
+.canvas {
   position: absolute;
   top: 29px;
   right: 55px;
