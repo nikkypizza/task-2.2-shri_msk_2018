@@ -1,14 +1,14 @@
 .device-card {
-  transition: 0.1s linear;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   min-width: 200px;
   height: 100px;
   margin: 0 0 0 18px;
+  cursor: pointer;
+  transition: .1s linear;
   border-radius: 20px;
   background-color: #f7f7f7;
-  cursor: pointer;
 
   &:hover {
     @include device-card-hover;
@@ -48,6 +48,25 @@
 }
 
 .device-card--xl {
-  height: 115px;
+  min-height: 115px;
   margin: 0 0 0 20px;
+}
+
+@media ($tablet-width) {
+  .device-card--greetings {
+    margin-top: 18px;
+  }
+}
+
+@media ($desktop-width) {
+  .device-card--xl {
+    min-height: 120px;
+    margin-left: 17px;
+  }
+  .device-card__icon--xl {
+    padding: 13px 0 0 13px;
+  }
+  .device-card__text {
+    padding: 0 0 14px 14px;
+  }
 }

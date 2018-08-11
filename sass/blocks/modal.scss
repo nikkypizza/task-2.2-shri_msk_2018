@@ -12,24 +12,22 @@
 }
 
 .modal__content {
-  position: absolute; // padding: 30px;
-  top: 23px; // border-radius: 30px;
+  position: absolute;
+  top: 23px;
   display: flex;
-  justify-content: space-between; // box-shadow: 0 5px 15px 3px $shadow-color;
+  justify-content: space-between;
   flex-direction: column;
-  width: 334px; //89% 334px
+  width: 334px; //89%
   height: 642px;
 }
 
 .modal__device {
-  width: 100%;
   height: 492px;
   border-radius: 20px;
   background-color: white;
 }
 
 .modal__text {
-  padding: 0 0 0 20px;
   color: $font-color-primary;
 }
 
@@ -38,25 +36,41 @@
   font-weight: bold;
   line-height: 21px;
   margin: 21px 0 0 0;
+  padding: 0 0 0 20px;
 }
 
 .modal__text-subtitle {
   font-size: 12px;
   line-height: 14px;
   margin: 4px 0 0 0;
+  padding: 0 0 0 20px;
 }
 
 .modal__text-radio-container {
   display: flex;
   align-items: center;
-  overflow-x: hidden;
-  height: 50px;
-  margin-top: 5px;
+  overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
+  margin: 15px 0 23px 0;
+  padding-bottom: 5px;
+
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & li:first-of-type {
+    margin-left: 20px;
+  }
+
+  & li {
+  }
 
   & li label {
     font-size: 13px;
+    display: inline-block;
     margin-right: 12px;
     padding: 7px 15px;
+    white-space: nowrap;
     border-radius: 20px;
     background-color: #f2f1f0;
 
@@ -72,8 +86,9 @@
     position: absolute;
     opacity: 0;
 
-    &:checked+label {
+    &:checked + label {
       background-color: $contrast-color;
+
       &:hover {
         background-color: $contrast-color-hover;
       }
@@ -82,6 +97,13 @@
       }
     }
   }
+}
+
+.modal__bnt-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 135px;
 }
 
 .modal__btn {
@@ -114,12 +136,29 @@
 }
 
 .modal__slider-output {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 42px;
+  position: absolute;
+  top: -122px;
+  right: 69px;
   display: none;
 }
 
 .modal__slider-container {
   position: relative;
   height: 336px;
+}
+
+.modal__slider-indicator {
+  position: absolute;
+  top: -126px;
+  right: 23px;
+  display: none;
+  width: 45px;
+  height: 45px;
+  background-image: url("../img/svg/icon_temperature_active.svg");
+  background-size: cover;
 }
 
 .modal__slider-icon {
@@ -130,7 +169,9 @@
   display: block;
   width: 36px;
   height: 36px;
+  pointer-events: none; // не даст ползунку слайдера застревать в точках экстремума
   color: white; // Стили для modal__slider--light
+
   &--top {
     top: 12px;
     right: 44.3%;
@@ -155,10 +196,10 @@
   width: 336px;
   height: 60px;
   margin: 138px 0 0 0;
+  cursor: pointer;
   transform: rotate(-90deg);
   border-radius: 35px;
   background-color: $contrast-color;
-  cursor: pointer;
 
   -webkit-appearance: none;
 
@@ -176,6 +217,7 @@
     border: 3px solid rgba(33, 33, 33, .1); // Внутренний бордер
     border-radius: 30px;
     box-shadow: 0 0 0 4px white; // Внешний бордер
+
     -webkit-appearance: none;
   }
 
@@ -196,5 +238,89 @@
     // Мне показалось логичным, что если есть опция "вручную", то остальные
     // кнопки должны отключать возможность редактирования инпута,
     // но это не точно
+  }
+}
+
+@media ($desktop-width) {
+  .modal__text {
+    height: 123px;
+  }
+
+  .modal__text-title {
+    font-size: 27px;
+    line-height: 31px;
+    margin-top: 26px;
+    padding-left: 25px;
+  }
+
+  .modal__text-subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 5px;
+    padding-left: 25px;
+  }
+
+  .modal__device {
+    // height: 343px;
+    // Для не-канваса
+    height: 238px;
+    //для не-канваса
+  }
+
+  .modal__slider-container {
+    height: 60px;
+  }
+
+  .modal__content {
+    // top: 100px;
+    // Для не-канваса
+    top: 188px;
+    //для не-канваса
+    justify-content: flex-start;
+    width: 630px;
+    min-height: 238px; //89%
+  }
+
+  .modal__slider {
+    width: 580px;
+    margin: 5px 0 0 24px;
+    transform: rotate(360deg);
+  }
+
+  .modal__slider-indicator {
+    display: block;
+  }
+
+  .modal__slider-icon {
+    &--top {
+      top: 17px;
+      right: 42px;
+    }
+
+    &--bottom {
+      bottom: 7px;
+      left: 37px;
+    }
+  }
+  .modal__slider-output {
+    display: block;
+  }
+
+  .modal__text-radio-container {
+    margin: 21px 0 0 0;
+    & li:first-of-type {
+      margin-left: 25px;
+    }
+  }
+
+  .modal__bnt-container {
+    justify-content: space-between;
+    flex-direction: row;
+    height: 60px;
+    margin-top: 21px;
+  }
+
+  .modal__btn {
+    width: 307px;
   }
 }

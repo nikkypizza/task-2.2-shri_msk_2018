@@ -1,9 +1,9 @@
 "use strict";
 
 // Не могу сообразить как сделать работающий круговой слайдер,
-// но могу нарисовать его на канвасе
+// но могу его нарисовать
+const canvas = document.querySelector(`canvas`);
 const drawCanvasRadialSlider = () => {
-  const canvas = document.querySelector(`canvas`);
   const ctx = canvas.getContext(`2d`);
 
   const colorYellow = `#F0C376`;
@@ -36,17 +36,17 @@ const drawCanvasRadialSlider = () => {
   }
 
   // Тень круга
-  ctx.strokeStyle = `#fff`;
   ctx.fillStyle = `rgba(0,0,0,.35)`;
+  ctx.strokeStyle = `#fff`;
   ctx.beginPath();
-  ctx.arc(108, 113, 87, 0, 2 * Math.PI, false);
+  ctx.arc(108, 113, 87, 0, Math.PI * 2, false);
   ctx.fill();
 
   // Фронтальный круг
   ctx.fillStyle = `#fefefe`;
   ctx.strokeStyle = `rgba(0,0,0,.15)`;
   ctx.beginPath();
-  ctx.arc(110, 109, 87, 0, 2 * Math.PI, false);
+  ctx.arc(110, 109, 87, 0, Math.PI * 2, false);
   ctx.stroke();
   ctx.fill();
 
@@ -78,14 +78,27 @@ const deviceCardNodes = favouritesNode.querySelectorAll(`.device-card`);
 
 const modalNode = document.querySelector(`.modal`);
 const modalContent = modalNode.querySelector(`.modal__content`);
+const modalContentTitle = modalContent.querySelector(`.modal__text-title`);
+const modalContentSubtitle = modalContent.querySelector(`.modal__text-subtitle`);
 const modalSlider = modalNode.querySelector(`.modal__slider`);
+const modalSliderOutput = modalNode.querySelector(`.modal__slider-output`);
 const modalBtns = modalNode.querySelectorAll(`.modal__btn`);
 const modalIcons = modalNode.querySelectorAll(`.modal__slider-icon`);
+const modalSliderIndicator = modalNode.querySelector(`.modal__slider-indicator`);
 const modalRadioContainer = modalNode.querySelector(`.modal__text-radio-container`);
 const modalRadioBtns = modalNode.querySelectorAll(`.modal__text-radio-container li label`);
 const modalRadioInputs = modalNode.querySelectorAll(`.modal__text-radio-container li input`);
 
+const onModalOpen = () => {
+  mainNode.style.filter = `blur(5px)`;
+  footerNode.style.filter = `blur(5px)`;
+  headerNode.style.filter = `blur(5px)`;
+  bodyNode.style.overflow = `hidden`; // Отменяет тач-скролл страницы при перемещении вертикального слайдера в модальном окне
+  modalNode.style.display = `flex`;
+};
+
 const onModalClose = () => {
+  // Обнуляет все изменения
   mainNode.style.filter = ``;
   footerNode.style.filter = ``;
   headerNode.style.filter = ``;
@@ -98,33 +111,40 @@ const onModalClose = () => {
     el.style = ``;
     el.textContent = ``;
   });
-  modalContent.querySelector(`.modal__text-radio-container`).style.visibility = ``;
-  modalContent.querySelector(`.canvas`).style.display = ``;
+
+  modalRadioContainer.style.visibility = ``;
+  canvas.style.display = ``;
 
   modalRadioBtns[1].textContent = `Холодно`;
   modalRadioBtns[2].textContent = `Тепло`;
+  modalRadioBtns[3].textContent = `Жарко`;
 
   modalRadioInputs[0].checked = true;
+  modalSliderIndicator.style.backgroundImage = `url("img/svg/icon_temperature_active.svg")`;
+  modalSliderOutput.style.display = ``;
+
+  document.querySelector(`.modal__slider-output`).value = `+23`;
 };
 
-const onModalOpen = () => {
-  mainNode.style.filter = `blur(5px)`;
-  footerNode.style.filter = `blur(5px)`;
-  headerNode.style.filter = `blur(5px)`;
-  bodyNode.style.overflow = `hidden`; // Отменяет тач-скролл страницы при перемещении вертикального слайдера в модальном окне
-  modalNode.style.display = `flex`;
-};
+// Добавляет `+` при значении слайдера > 0
+modalSlider.addEventListener(`input`, () => {
+  if (modalSlider.value > 0) {
+    modalSliderOutput.value = `+${modalSlider.value}`;
+  }
+});
 
 deviceCardNodes.forEach((el) => {
 
   el.addEventListener(`click`, (evt) => {
     const isTemperatureCard = evt.target.querySelector(`.device-card__icon use`).getAttribute(`xlink:href`).startsWith(`#icon_temperature`);
+    const evtTargetTitle = evt.target.querySelector(`.device-card__text-title`).textContent;
+    const evtTargetSubtitle = evt.target.querySelector(`.device-card__text-subtitle`).textContent;
 
     onModalOpen();
     modalSlider.style.display = ``;
-    modalContent.querySelector(`.modal__text-title`).textContent = evt.target.querySelector(`.device-card__text-title`).textContent;
-    modalContent.querySelector(`.modal__text-subtitle`).textContent = evt.target.querySelector(`.device-card__text-subtitle`).textContent;
-    modalContent.querySelector(`.canvas`).style.display = `none`;
+    modalContentTitle.textContent = evtTargetTitle;
+    modalContentSubtitle.textContent = evtTargetSubtitle;
+    canvas.style.display = `none`;
     modalIcons.forEach((elm) => {
       elm.style.display = ``;
     });
@@ -141,10 +161,15 @@ deviceCardNodes.forEach((el) => {
       modalIcons.forEach((element) => {
         element.style.backgroundImage = `none`;
       });
+      modalSliderIndicator.style.backgroundImage = `url("img/svg/icon_temperature_active.svg")`;
+
     } else {
       modalSlider.classList.add(`modal__slider--light`);
       modalRadioBtns[1].textContent = `Дневной свет`;
       modalRadioBtns[2].textContent = `Вечерний свет`;
+      modalRadioBtns[3].textContent = `Рассвет`;
+      modalSliderIndicator.style.backgroundImage = `url("img/svg/icon_sun_inactive.svg")`;
+      modalSliderOutput.style.display = `none`;
     }
   });
 });
@@ -152,16 +177,21 @@ deviceCardNodes.forEach((el) => {
 modalRadioContainer.addEventListener(`change`, (evt) => {
   modalSlider.disabled = false;
   switch (evt.target) {
-    case modalRadioInputs[0]:
-      modalSlider.value = 16;
-      break;
     case modalRadioInputs[1]:
-      modalSlider.value = -10;
+      modalSlider.value = 5;
+      modalSliderOutput.value = `+5`;
       modalSlider.disabled = true;
       break;
     case modalRadioInputs[2]:
-      modalSlider.value = 30;
+      modalSlider.value = 20;
+      modalSliderOutput.value = `+20`;
       modalSlider.disabled = true;
+      break;
+    case modalRadioInputs[3]:
+      modalSlider.value = 28;
+      modalSliderOutput.value = `+28`;
+      modalSlider.disabled = true;
+      break;
       // Мне показалось логичным, что если есть опция `вручную`, то остальные
       // кнопки должны отключать возможность редактирования инпута,
       // но это не точно
@@ -170,11 +200,11 @@ modalRadioContainer.addEventListener(`change`, (evt) => {
 
 warmFloorCard.addEventListener(`click`, () => {
   onModalOpen();
-  modalContent.querySelector(`.modal__text-title`).textContent = `Xiaomi Warm Floor`;
-  modalContent.querySelector(`.modal__text-subtitle`).textContent = `Включено`;
-  modalContent.querySelector(`.modal__slider`).style.display = `none`;
-  modalContent.querySelector(`.modal__text-radio-container`).style.visibility = `hidden`;
-  // `hidden` - чтобы элемент остался на месте и верстка карточки не поехала
+  modalContentTitle.textContent = `Xiaomi Warm Floor`;
+  modalContentSubtitle.textContent = `Включено`;
+  modalSlider.style.display = `none`;
+  modalRadioContainer.style.visibility = `hidden`;
+  // vis=`hidden` - чтобы элемент остался на месте и верстка карточки не поехала
   modalIcons.forEach((el) => {
     el.style.display = `none`;
   });
@@ -192,7 +222,6 @@ modalContent.addEventListener(`click`, (evt) => {
 
 modalNode.addEventListener(`click`, () => {
   onModalClose();
-
 });
 
 window.addEventListener(`keydown`, (evt) => {

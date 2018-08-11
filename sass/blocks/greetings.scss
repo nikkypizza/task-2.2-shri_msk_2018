@@ -1,12 +1,13 @@
 .greetings {
   width: 89.3%;
   height: 282px;
-  margin: 12px 5%; //???
+  margin: 12px 5%;
   border-radius: 20px;
   background-color: #ebe8e3;
   background-image: url("../img/greeetings_bg@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
+  // transition: .3s linear;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5),
@@ -26,6 +27,7 @@
   font-weight: bold;
   line-height: 21px;
   margin-bottom: 0;
+  transition: .3s linear;
   color: $font-color-primary;
 }
 
@@ -41,14 +43,21 @@
 }
 
 .greetings__temperature {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-right: 19px;
 }
 
 .greetings__temperature-subtitle--icon::after {
-  margin-left: 5px;
-  content: url("../img/svg/icon_cloud.svg");
+  position: absolute;
+  top: 24px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-image: url("../img/svg/icon_cloud.svg");
+  background-size: cover;
 }
 
 .greetings__temperature-title {
@@ -67,4 +76,50 @@
 
 .greetings__btn-show-more {
   display: none;
+}
+
+@media ($tablet-width) {
+  .greetings {
+    display: flex;
+    justify-content: space-between;
+    height: 331px;
+    margin: 19px 4%;
+  }
+
+  .greetings__info-wrapper {
+    padding: 4px 0 6px 26px;
+  }
+
+  .greetings__title {
+    font-size: 27px;
+    line-height: 31px;
+  }
+  .greetings__subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 26px;
+  }
+
+  .greetings__temperature-title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .greetings__temperature-subtitle {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .greetings__temperature-subtitle--icon::after {
+    top: 26px;
+    right: -12px;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media ($desktop-width) {
+  .greetings {
+    width: 630px;
+    margin: 19px 0 19px 40px;
+  }
 }

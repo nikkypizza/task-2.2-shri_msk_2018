@@ -1,0 +1,26 @@
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  margin: 29px 0 16px 20px;
+  color: $font-color-primary;
+
+  &--main {
+    display: none;
+  }
+}
+
+
+@media ($desktop-width) {
+  .section-title {
+    margin: 29px 0 16px 40px;
+
+    &--main {
+      display: block;
+    }
+  }
+
+  .section-title--fav-devices {
+    margin-top: 15px;
+  }
+}

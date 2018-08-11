@@ -13,12 +13,15 @@
     "gulp-svgstore": "latest",
     "gulp-postcss": "latest",
     "gulp-posthtml": "latest",
+    "gulp-jsmin": "latest",
     "posthtml": "latest",
     "browser-sync": "latest",
     "gulp-plumber": "latest",
     "gulp-bower-normalize": "latest",
     "gulp-csso": "latest",
-    "imagemin-pngquant": "latest"
+    "imagemin-pngquant": "latest",
+    "run-sequence": "latest",
+    "del": "latest"
   },
   "scripts": {
     "devimages": "gulp pngmin && gulp svgo"
