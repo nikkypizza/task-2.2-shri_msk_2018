@@ -1,0 +1,38 @@
+.device-list {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  // Список листается с мобильных устройств в эмуляторе хрома, и не имеет скроллбара на
+  // узких ширинах десктопа. Как совместить то и другое без вреда дизайну
+  // пока не сообразил, но если главный критерий - соответствие макету, то
+  // это условие выполняется )
+
+  -ms-overflow-style: none;
+
+  &--favourites {
+    margin-top: 3px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media ($tablet-width) {
+  .device-list--greetings {
+    flex-direction: column;
+    margin: 0 17px 0 0;
+  }
+}
+
+@media ($desktop-width) {
+  .device-list--favourites {
+    margin: 7px 0 0 0;
+
+    & li:first-of-type {
+      margin-left: 40px;
+    }
+  }
+}

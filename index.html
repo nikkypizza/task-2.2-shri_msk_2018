@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Яндекс.Дом</title>
   <link rel="stylesheet" href="css/style.css">
@@ -21,7 +22,7 @@
     </button>
     <nav class="page-header__nav">
       <ul class="page-header__nav-list">
-        <li class="page-header__nav-list-item">
+        <li class="page-header__nav-list-item page-header__nav-list-item--active">
           <a href="#">Сводка</a>
         </li>
         <li class="page-header__nav-list-item">
@@ -34,150 +35,157 @@
     </nav>
   </header>
   <main>
-    <section>
-      <h3 class="section-title section-title--main">Главное</h3>
-      <article class="greetings">
-        <div class="greetings__info-wrapper">
-          <h2 class="greetings__title">Привет, Геннадий!</h2>
-          <p class="greetings__subtitle">Двери и окна закрыты, сигнализация включена.</p>
-          <div class="greetings__temperature-wrapper">
-            <div class="greetings__temperature">
-              <span class="greetings__temperature-title">Дома</span>
-              <span class="greetings__temperature-subtitle">+23</span>
-            </div>
-            <div class="greetings__temperature">
-              <span class="greetings__temperature-title">За окном</span>
-              <span class="greetings__temperature-subtitle greetings__temperature-subtitle--icon">+19</span>
+    <div class="main-fav-sections-wrapper">
+      <section>
+        <h3 class="section-title section-title--main">Главное</h3>
+        <article class="greetings">
+          <div class="greetings__info-wrapper">
+            <h2 class="greetings__title">Привет, Геннадий!</h2>
+            <p class="greetings__subtitle">Двери и окна закрыты, сигнализация включена.</p>
+            <div class="greetings__temperature-wrapper">
+              <div class="greetings__temperature">
+                <span class="greetings__temperature-title">Дома</span>
+                <span class="greetings__temperature-subtitle">+23</span>
+              </div>
+              <div class="greetings__temperature">
+                <span class="greetings__temperature-title">За окном</span>
+                <span class="greetings__temperature-subtitle greetings__temperature-subtitle--icon">+19</span>
+              </div>
             </div>
           </div>
-        </div>
+          <ul class="device-list device-list--greetings">
+            <li class="device-card device-card--xl device-card--greetings">
+              <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
+                <use xlink:href="#icon_temperature_inactive"></use>
+              </svg>
+              <div class="device-card__text">
+                <h4 class="device-card__text-title">Philips Cooler</h4>
+                <p class="device-card__text-subtitle">Начнет охлаждать в 16:30</p>
+              </div>
+            </li>
+            <li class="device-card device-card--xl device-card--greetings">
+              <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
+                <use xlink:href="#icon_sun_inactive"></use>
+              </svg>
+              <div class="device-card__text">
+                <h4 class="device-card__text-title">Xiaomi Yeelight LED Smart Bulb</h4>
+                <p class="device-card__text-subtitle">Включится в 17:00</p>
+              </div>
+            </li>
+            <li class="device-card device-card--xl device-card--greetings">
+              <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
+                <use xlink:href="#icon_temperature_inactive"></use>
+              </svg>
+              <div class="device-card__text">
+                <h4 class="device-card__text-title">Elgato Eve Degree Connected</h4>
+                <p class="device-card__text-subtitle">Выключено до 21:30</p>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="fav-scripts">
+        <header class="fav-scripts__header">
+          <h3 class="section-title">Избранные сценарии</h3>
+          <div class="section-scroll-btns">
+            <button type="button" title="Пролисать назад">
+              <svg width="12" height="12">
+                <use xlink:href="#icon_arrow_left"></use>
+              </svg>
+            </button>
+            <button type="button" title="Пролисать вперед">
+              <svg width="12" height="12">
+                <use xlink:href="#icon_arrow_left"></use>
+              </svg>
+            </button>
+          </div>
+        </header>
         <ul class="device-list">
-          <li class="device-card device-card--xl">
-            <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
+          <li class="device-card">
+            <svg class="device-card__icon" width="24" height="24">
+              <use xlink:href="#icon_sun_active"></use>
+            </svg>
+            <div class="device-card__text">
+              <h4 class="device-card__text-title">Выключить весь свет в доме и во дворе</h4>
+            </div>
+          </li>
+          <li class="device-card">
+            <svg class="device-card__icon" width="24" height="24">
+              <use xlink:href="#icon_scheduled"></use>
+            </svg>
+            <div class="device-card__text">
+              <h4 class="device-card__text-title">Я ухожу</h4>
+            </div>
+          </li>
+          <li class="device-card">
+            <svg class="device-card__icon" width="24" height="24">
+              <use xlink:href="#icon_sun_active"></use>
+            </svg>
+            <div class="device-card__text">
+              <h4 class="device-card__text-title">Включить свет в коридоре</h4>
+            </div>
+          </li>
+          <li class="device-card">
+            <svg class="device-card__icon" width="24" height="24">
               <use xlink:href="#icon_temperature_inactive"></use>
             </svg>
             <div class="device-card__text">
-              <h4 class="device-card__text-title">Philips Cooler</h4>
-              <p class="device-card__text-subtitle">Начнет охлаждать в 16:30</p>
+              <h4 class="device-card__text-title">Набрать горячую ванну</h4>
+              <p class="device-card__text-subtitle">Начнётся в 18:00</p>
             </div>
           </li>
-          <li class="device-card device-card--xl">
-            <svg class="device-card__icon device-card__icon--xl" width="24" height="24">
-              <use xlink:href="#icon_sun_inactive"></use>
+          <li class="device-card js-warm-floor">
+            <svg class="device-card__icon" width="24" height="24">
+              <use xlink:href="#icon_temperature_active"></use>
             </svg>
             <div class="device-card__text">
-              <h4 class="device-card__text-title">Xiaomi Yeelight LED Smart Bulb</h4>
-              <p class="device-card__text-subtitle">Включится в 17:00</p>
+              <h4 class="device-card__text-title">Сделать пол тёплым во всей квартире</h4>
             </div>
           </li>
         </ul>
-        <button class="greetings__btn-show-more" type="button" title="Показать еще">
-          <svg width="16" height="16">
-            <use xlink:href="#icon_double_up_arrow"></use>
-          </svg>
-        </button>
-      </article>
-    </section>
-    <section>
-      <header>
-        <h3 class="section-title">Избранные сценарии</h3>
-        <div class="section-scroll-btns">
-          <button type="button" title="Пролисать назад">
-            <svg width="9" height="14">
-              <use xlink:href="#icon_arrow_left"></use>
-            </svg>
-          </button>
-          <button type="button" title="Пролисать вперед">
-            <svg width="9" height="14">
-              <use xlink:href="#icon_arrow_left"></use>
-            </svg>
-          </button>
-        </div>
-      </header>
-      <ul class="device-list">
-        <li class="device-card">
-          <svg class="device-card__icon" width="24" height="24">
-            <use xlink:href="#icon_sun_active"></use>
-          </svg>
-          <div class="device-card__text">
-            <h4 class="device-card__text-title">Выключить весь свет в доме и во дворе</h4>
-          </div>
-        </li>
-        <li class="device-card">
-          <svg class="device-card__icon" width="24" height="24">
-            <use xlink:href="#icon_scheduled"></use>
-          </svg>
-          <div class="device-card__text">
-            <h4 class="device-card__text-title">Я ухожу</h4>
-          </div>
-        </li>
-        <li class="device-card">
-          <svg class="device-card__icon" width="24" height="24">
-            <use xlink:href="#icon_sun_active"></use>
-          </svg>
-          <div class="device-card__text">
-            <h4 class="device-card__text-title">Включить свет в коридоре</h4>
-          </div>
-        </li>
-        <li class="device-card">
-          <svg class="device-card__icon" width="24" height="24">
-            <use xlink:href="#icon_temperature_inactive"></use>
-          </svg>
-          <div class="device-card__text">
-            <h4 class="device-card__text-title">Набрать горячую ванну</h4>
-            <p class="device-card__text-subtitle">Начнётся в 18:00</p>
-          </div>
-        </li>
-        <li class="device-card">
-          <svg class="device-card__icon" width="24" height="24">
-            <use xlink:href="#icon_temperature_active"></use>
-          </svg>
-          <div class="device-card__text">
-            <h4 class="device-card__text-title">Сделать пол тёплым во всей квартире</h4>
-          </div>
-        </li>
-      </ul>
-    </section>
+      </section>
+    </div>
     <section class="favourites">
       <header class="favourites__header">
-        <h3 class="section-title">Избранные устройства</h3>
-        <select class="filter-select" onchange="this.blur();" onblur="this.style.width='96px';">
-          <option selected>Все</option>
+        <h3 class="section-title section-title--fav-devices">Избранные устройства</h3>
+        <select class="favourites__filter-select" onchange="this.style.width='96px';">
+          <!--- Увеличиваем ширину для того, чтобы другие опции поместились в селект -->
+          <option selected>Все &#8964;</option>
           <option>Кухня</option>
           <option>Зал</option>
           <option>Лампочки</option>
           <option>Камеры</option>
         </select>
-        <!-- <ul>
+        <ul class="favourites__filter-radio">
           <li>
-            <input type="radio" name="device_categories" value="Все" id="radio-select-all" checked>
-            <label for="radio-select-all">Все</label>
+            <input type="radio" name="favourites-filter-categories" value="Все" id="favourites-radio-all" checked>
+            <label for="favourites-radio-all">Все</label>
           </li>
           <li>
-            <input type="radio" name="device_categories" value="Все" id="radio-select-kitchen">
-            <label for="radio-select-kitchen">Кухня</label>
+            <input type="radio" name="favourites-filter-categories" value="Все" id="favourites-radio-kitchen">
+            <label for="favourites-radio-kitchen">Кухня</label>
           </li>
           <li>
-            <input type="radio" name="device_categories" value="Все" id="radio-select-hall">
-            <label for="radio-select-hall">Зал</label>
+            <input type="radio" name="favourites-filter-categories" value="Все" id="favourites-radio-hall">
+            <label for="favourites-radio-hall">Зал</label>
           </li>
           <li>
-            <input type="radio" name="device_categories" value="Все" id="radio-select-bulbs">
-            <label for="radio-select-bulbs">Лампочки</label>
+            <input type="radio" name="favourites-filter-categories" value="Все" id="favourites-radio-bulbs">
+            <label for="favourites-radio-bulbs">Лампочки</label>
           </li>
           <li>
-            <input type="radio" name="device_categories" value="Все" id="radio-select-cameras">
-            <label for="radio-select-cameras">Камеры</label>
+            <input type="radio" name="favourites-filter-categories" value="Все" id="favourites-radio-cameras">
+            <label for="favourites-radio-cameras">Камеры</label>
           </li>
-        </ul> -->
+        </ul>
         <div class="section-scroll-btns">
           <button type="button" title="Пролисать назад">
-            <svg width="9" height="14">
+            <svg width="12" height="12">
               <use xlink:href="#icon_arrow_left"></use>
             </svg>
           </button>
           <button type="button" title="Пролисать вперед">
-            <svg width="9" height="14">
+            <svg width="12" height="12">
               <use xlink:href="#icon_arrow_left"></use>
             </svg>
           </button>
@@ -267,123 +275,48 @@
     </ul>
     <span class="footer__copyright">© 2001–2017 ООО «Яндекс»</span>
   </footer>
-  <div style="display:none">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <defs>
-        <path d="M0 3.326a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.681A.995.995 0 0 1 15 5H1c-.552 0-1-.44-1-.993v-.68zM0 8.66a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .993H1c-.552 0-1-.44-1-.993v-.68zm0 5.333A.995.995 0 0 1 1 13h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .994H1c-.552 0-1-.44-1-.993v-.681z" id="a" />
-      </defs>
-      <symbol id="icon_arrow_left" viewBox="0 0 791.966 791.967">
-        <path d="M245.454 396.017L617.077 56.579c12.973-12.94 12.973-33.934 0-46.874-12.973-12.94-34.033-12.94-47.006 0L174.615 370.896c-6.932 6.899-9.87 16.076-9.408 25.087-.462 9.045 2.476 18.188 9.408 25.088l395.456 361.19c12.973 12.94 34.033 12.94 47.006 0 12.973-12.939 12.973-33.934 0-46.873L245.454 396.017z" />
-      </symbol>
-      <symbol id="icon_arrow_up">
-        <path d="M.311 5.944L5.036.59c.335-.38.492-.478.68-.543a.858.858 0 0 1 .568 0c.188.065.345.163.68.543l4.725 5.353a1.32 1.32 0 0 1 0 1.703c-.2.226-.47.353-.752.353H1.063C.476 8 0 7.46 0 6.795c0-.32.112-.626.311-.851z" fill="#333" />
-      </symbol>
-      <symbol id="icon_cloud">
-        <g fill="none" fill-rule="evenodd">
-          <path d="M-212-365h1366v768H-212z" />
-          <path d="M0 0h26v26H0z" />
-          <path d="M15 20v2m0-9v2m-5 7v2m0-9v2m11 .58A5 5 0 0 0 19 8h-1.26A8 8 0 1 0 5 16.25" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
-        </g>
-      </symbol>
-      <symbol id="icon_double_up_arrow" viewBox="0 0 1792 1792">
-        <path d="M1395 1312q0 13-10 23l-50 50q-10 10-23 10t-23-10L896 992l-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23zm0-384q0 13-10 23l-50 50q-10 10-23 10t-23-10L896 608l-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z" />
-      </symbol>
-      <symbol id="icon_menu_closed">
-        <use fill="#333" xlink:href="#a" transform="translate(0 -2)" fill-rule="evenodd" />
-      </symbol>
-      <symbol id="icon_scheduled">
-        <g fill="none" fill-rule="evenodd">
-          <path fill="#F8F8F8" d="M-925-250H441v768H-925z" />
-          <path d="M0 0h24v24H0z" />
-          <g transform="translate(2 2)" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <circle cx="10" cy="10" r="10" />
-            <path opacity=".3" d="M10 4v6l3 3" />
-          </g>
-        </g>
-      </symbol>
-      <symbol id="icon_sun_active">
-        <g fill="none" fill-rule="evenodd">
-          <path d="M-1140-250H226v768h-1366z" />
-          <path d="M0 0h24v24H0z" />
-          <g transform="translate(1 1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <circle stroke="#F5A623" cx="11" cy="11" r="5" />
-            <path d="M11 0v2m0 18v2M3.22 3.22l1.42 1.42m12.72 12.72l1.42 1.42M0 11h2m18 0h2M3.22 18.78l1.42-1.42M17.36 4.64l1.42-1.42" stroke="#FFD93E" />
-          </g>
-        </g>
-      </symbol>
-      <symbol id="icon_sun_inactive">
-        <g fill="none" fill-rule="evenodd">
-          <path d="M-464-404H902v768H-464z" />
-          <path d="M0 0h24v24H0z" />
-          <g transform="translate(1 1)" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <circle stroke-opacity=".4" cx="11" cy="11" r="5" />
-            <path d="M11 0v2m0 18v2M3.22 3.22l1.42 1.42m12.72 12.72l1.42 1.42M0 11h2m18 0h2M3.22 18.78l1.42-1.42M17.36 4.64l1.42-1.42" stroke-opacity=".1" />
-          </g>
-        </g>
-      </symbol>
-      <symbol id="icon_sun_max">
-        <g transform="translate(2 2)" stroke="#FFF" stroke-width="3" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="16" cy="16" r="7.273" />
-          <path d="M16 0v2.91m0 26.18V32M4.684 4.684l2.065 2.065M25.25 25.25l2.066 2.066M0 16h2.91m26.18 0H32M4.684 27.316l2.065-2.065M25.25 6.75l2.066-2.066" />
-        </g>
-      </symbol>
-      <symbol id="icon_sun_min">
-        <g transform="translate(3 3)" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="15" cy="15" r="7.273" />
-          <path d="M15 1v.91m0 26.18V29M5 5l.75.75m18.5 18.5L25 25M1 15h.91m26.18 0H29M5 25l.75-.75m18.5-18.5L25 5" />
-        </g>
-      </symbol>
-      <symbol id="icon_temperature_active">
-        <g fill="none" fill-rule="evenodd">
-          <path d="M-925-365H441v768H-925z" />
-          <path d="M0 0h24v24H0z" />
-          <g transform="translate(7 1)">
-            <path d="M7 13.76V2.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <circle fill="#FFD93E" fill-rule="nonzero" cx="4.5" cy="17.5" r="3.5" />
-          </g>
-        </g>
-      </symbol>
-      <symbol id="icon_temperature_inactive">
-        <g fill="none" fill-rule="evenodd">
-          <path d="M-464-269H902v768H-464z" />
-          <path d="M0 0h24v24H0z" />
-          <path d="M14 14.76V3.5a2.5 2.5 0 1 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke-opacity=".4" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <circle fill-opacity=".1" fill="#333" fill-rule="nonzero" cx="11.5" cy="18.5" r="3.5" />
-        </g>
-      </symbol>
-    </svg>
+  <div class="svg-sprite">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 3.326a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.681A.995.995 0 0 1 15 5H1c-.552 0-1-.44-1-.993v-.68zM0 8.66a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .993H1c-.552 0-1-.44-1-.993v-.68zm0 5.333A.995.995 0 0 1 1 13h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .994H1c-.552 0-1-.44-1-.993v-.681z" id="a"/></defs><symbol id="icon_arrow_left" viewBox="0 0 791.966 791.967"><path d="M245.454 396.017L617.077 56.579c12.973-12.94 12.973-33.934 0-46.874-12.973-12.94-34.033-12.94-47.006 0L174.615 370.896c-6.932 6.899-9.87 16.076-9.408 25.087-.462 9.045 2.476 18.188 9.408 25.088l395.456 361.19c12.973 12.94 34.033 12.94 47.006 0 12.973-12.939 12.973-33.934 0-46.873L245.454 396.017z"/></symbol><symbol id="icon_cloud" viewBox="0 0 26 26"><g fill="none" fill-rule="evenodd"><path d="M-212-365h1366v768H-212z"/><path d="M0 0h26v26H0z"/><path d="M15 20v2m0-9v2m-5 7v2m0-9v2m11 .58A5 5 0 0 0 19 8h-1.26A8 8 0 1 0 5 16.25" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/></g></symbol><symbol id="icon_menu_closed"><use fill="#333" xlink:href="#a" transform="translate(0 -2)" fill-rule="evenodd"/></symbol><symbol id="icon_scheduled"><g fill="none" fill-rule="evenodd"><path d="M-925-250H441v768H-925z"/><path d="M0 0h24v24H0z"/><g transform="translate(2 2)" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="10" cy="10" r="10"/><path opacity=".3" d="M10 4v6l3 3"/></g></g></symbol><symbol id="icon_sun_active"><g fill="none" fill-rule="evenodd"><path d="M-1140-250H226v768h-1366z"/><path d="M0 0h24v24H0z"/><g transform="translate(1 1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle stroke="#F5A623" cx="11" cy="11" r="5"/><path d="M11 0v2m0 18v2M3.22 3.22l1.42 1.42m12.72 12.72l1.42 1.42M0 11h2m18 0h2M3.22 18.78l1.42-1.42M17.36 4.64l1.42-1.42" stroke="#FFD93E"/></g></g></symbol><symbol id="icon_sun_inactive"><g fill="none" fill-rule="evenodd"><path d="M-464-404H902v768H-464z"/><path d="M0 0h24v24H0z"/><g transform="translate(1 1)" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle stroke-opacity=".4" cx="11" cy="11" r="5"/><path d="M11 0v2m0 18v2M3.22 3.22l1.42 1.42m12.72 12.72l1.42 1.42M0 11h2m18 0h2M3.22 18.78l1.42-1.42M17.36 4.64l1.42-1.42" stroke-opacity=".1"/></g></g></symbol><symbol id="icon_temperature_active"><g fill="none" fill-rule="evenodd"><path d="M-925-365H441v768H-925z"/><path d="M0 0h24v24H0z"/><g transform="translate(7 1)"><path d="M7 13.76V2.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FFD93E" fill-rule="nonzero" cx="4.5" cy="17.5" r="3.5"/></g></g></symbol><symbol id="icon_temperature_inactive"><g fill="none" fill-rule="evenodd"><path d="M-464-269H902v768H-464z"/><path d="M0 0h24v24H0z"/><path d="M14 14.76V3.5a2.5 2.5 0 1 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke-opacity=".4" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle fill-opacity=".1" fill="#333" fill-rule="nonzero" cx="11.5" cy="18.5" r="3.5"/></g></symbol></svg>
   </div>
   <div class="modal">
     <div class="modal__content">
       <div class="modal__device">
         <div class="modal__text">
-          <h4 class="modal__text-title">Elgato Eve Degree Connected</h4>
-          <p class="modal__text-subtitle">Включено</p>
+          <h4 class="modal__text-title">Заголовок</h4>
+          <p class="modal__text-subtitle">Подзаголовок</p>
           <ul class="modal__text-radio-container">
             <li>
-              <input type="radio" name="device_categories" value="Вручную" id="radio-select-all" checked>
-              <label for="radio-select-all">Вручную</label>
+              <input type="radio" name="device_categories" value="Вручную" id="slider-radio-by-hand" checked>
+              <label for="slider-radio-by-hand">Вручную</label>
             </li>
             <li>
-              <input type="radio" name="device_categories" value="Холодно" id="radio-select-kitchen">
-              <label for="radio-select-kitchen">Холодно</label>
+              <input type="radio" name="device_categories" value="Холодно" id="slider-radio-cold">
+              <label for="slider-radio-cold">Холодно</label>
             </li>
             <li>
-              <input type="radio" name="device_categories" value="Тепло" id="radio-select-hall">
-              <label for="radio-select-hall">Тепло</label>
+              <input type="radio" name="device_categories" value="Тепло" id="slider-radio-hot">
+              <label for="slider-radio-hot">Тепло</label>
+            </li>
+            <li>
+              <input type="radio" name="device_categories" value="Жарко" id="slider-radio-very-hot">
+              <label for="slider-radio-very-hot">Жарко</label>
             </li>
           </ul>
         </div>
         <div class="modal__slider-container">
-          <canvas width="221" height="221"></canvas>
-          <input class="modal__slider modal__slider--light" type="range" min="-10" max="30" value="16" step="1" id="rangeInput" oninput="output.value = rangeInput.value">
-          <output class="modal__slider-output" id="output" for="rangeInput">15</output>
+          <canvas class="canvas" width="221" height="221"></canvas>
+          <input class="modal__slider" type="range" min="-10" max="30" value="23" step="1" id="rangeInput" oninput="output.value = rangeInput.value">
+          <output class="modal__slider-output" id="output" for="rangeInput">+23</output>
           <span class="modal__slider-icon modal__slider-icon--top"></span>
           <span class="modal__slider-icon modal__slider-icon--bottom"></span>
+          <span class="modal__slider-indicator">
+          </span>
         </div>
       </div>
-      <button type="button" class="modal__btn modal__btn--submit">Применить</button>
-      <button type="button" class="modal__btn">Закрыть</button>
+      <div class="modal__bnt-container">
+        <button type="button" class="modal__btn modal__btn--submit">Применить</button>
+        <button type="button" class="modal__btn modal__btn--close">Закрыть</button>
+      </div>
     </div>
   </div>
   <script src="js/main.js"></script>

@@ -8,23 +8,27 @@ var imagemin = require('gulp-imagemin');
 var svgstore = require("gulp-svgstore");
 var rename = require("gulp-rename");
 var imageminPngquant = require('imagemin-pngquant');
+var cssmin = require("gulp-csso");
+var jsmin = require("gulp-jsmin");
+var run = require("run-sequence");
+var del = require("del");
 
 // Minify png
 gulp.task('pngmin', () =>
-  gulp.src('assets/img/**/*.png')
+  gulp.src('img/**/*.png')
   .pipe(imagemin([
     imageminPngquant({ quality: 45 })
   ]))
-  .pipe(gulp.dest('img'))
+  .pipe(gulp.dest('public/img'))
 )
 
 // Minify SVG
 gulp.task("svgo", function () {
-  gulp.src("assets/svg/*.svg")
+  gulp.src("img/svg/*.svg")
     .pipe(imagemin([
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("img/svg"));
+    .pipe(gulp.dest("public/img/svg"));
 });
 
 // Genetare SVG sprite from icons starting with "icon-"
@@ -82,3 +86,33 @@ gulp.task('sass', function () {
 //   #####################   //
 // BrowserSync all files END //
 //   #####################   //
+
+gulp.task("copy", function () {
+  return gulp.src([
+      "*.html",
+      "favicon.ico"
+    ], {
+      base: "."
+    })
+    .pipe(gulp.dest("public"));
+});
+
+gulp.task("clean", function () {
+  return del("public");
+});
+
+gulp.task("cssmin", function() {
+  gulp.src("css/style.css")
+    .pipe(cssmin())
+    .pipe(gulp.dest("public/css"));
+});
+
+gulp.task("jsmin", function () {
+    gulp.src('js/*.js')
+        .pipe(jsmin())
+        .pipe(gulp.dest('public/js'));
+});
+
+gulp.task("build", function (done) {
+  run("clean", "copy", "pngmin", "jsmin", "cssmin", "svgo", done);
+});
