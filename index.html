@@ -275,7 +275,8 @@
     </ul>
     <span class="footer__copyright">© 2001–2017 ООО «Яндекс»</span>
   </footer>
-  <div class="svg-sprite">
+  <div style="display: none;">
+    <!-- Инлайновый стиль - ибо этот блок должен быть всегда скрыт, стили не будут переопределяться -->
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 3.326a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.681A.995.995 0 0 1 15 5H1c-.552 0-1-.44-1-.993v-.68zM0 8.66a.995.995 0 0 1 1-.993h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .993H1c-.552 0-1-.44-1-.993v-.68zm0 5.333A.995.995 0 0 1 1 13h14c.552 0 1 .44 1 .993v.68a.995.995 0 0 1-1 .994H1c-.552 0-1-.44-1-.993v-.681z" id="a"/></defs><symbol id="icon_arrow_left" viewBox="0 0 791.966 791.967"><path d="M245.454 396.017L617.077 56.579c12.973-12.94 12.973-33.934 0-46.874-12.973-12.94-34.033-12.94-47.006 0L174.615 370.896c-6.932 6.899-9.87 16.076-9.408 25.087-.462 9.045 2.476 18.188 9.408 25.088l395.456 361.19c12.973 12.94 34.033 12.94 47.006 0 12.973-12.939 12.973-33.934 0-46.873L245.454 396.017z"/></symbol><symbol id="icon_cloud" viewBox="0 0 26 26"><g fill="none" fill-rule="evenodd"><path d="M-212-365h1366v768H-212z"/><path d="M0 0h26v26H0z"/><path d="M15 20v2m0-9v2m-5 7v2m0-9v2m11 .58A5 5 0 0 0 19 8h-1.26A8 8 0 1 0 5 16.25" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/></g></symbol><symbol id="icon_menu_closed"><use fill="#333" xlink:href="#a" transform="translate(0 -2)" fill-rule="evenodd"/></symbol><symbol id="icon_scheduled"><g fill="none" fill-rule="evenodd"><path d="M-925-250H441v768H-925z"/><path d="M0 0h24v24H0z"/><g transform="translate(2 2)" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="10" cy="10" r="10"/><path opacity=".3" d="M10 4v6l3 3"/></g></g></symbol><symbol id="icon_sun_active"><g fill="none" fill-rule="evenodd"><path d="M-1140-250H226v768h-1366z"/><path d="M0 0h24v24H0z"/><g transform="translate(1 1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle stroke="#F5A623" cx="11" cy="11" r="5"/><path d="M11 0v2m0 18v2M3.22 3.22l1.42 1.42m12.72 12.72l1.42 1.42M0 11h2m18 0h2M3.22 18.78l1.42-1.42M17.36 4.64l1.42-1.42" stroke="#FFD93E"/></g></g></symbol><symbol id="icon_sun_inactive"><g fill="none" fill-rule="evenodd"><path d="M-464-404H902v768H-464z"/><path d="M0 0h24v24H0z"/><g transform="translate(1 1)" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle stroke-opacity=".4" cx="11" cy="11" r="5"/><path d="M11 0v2m0 18v2M3.22 3.22l1.42 1.42m12.72 12.72l1.42 1.42M0 11h2m18 0h2M3.22 18.78l1.42-1.42M17.36 4.64l1.42-1.42" stroke-opacity=".1"/></g></g></symbol><symbol id="icon_temperature_active"><g fill="none" fill-rule="evenodd"><path d="M-925-365H441v768H-925z"/><path d="M0 0h24v24H0z"/><g transform="translate(7 1)"><path d="M7 13.76V2.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FFD93E" fill-rule="nonzero" cx="4.5" cy="17.5" r="3.5"/></g></g></symbol><symbol id="icon_temperature_inactive"><g fill="none" fill-rule="evenodd"><path d="M-464-269H902v768H-464z"/><path d="M0 0h24v24H0z"/><path d="M14 14.76V3.5a2.5 2.5 0 1 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke-opacity=".4" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle fill-opacity=".1" fill="#333" fill-rule="nonzero" cx="11.5" cy="18.5" r="3.5"/></g></symbol></svg>
   </div>
   <div class="modal">
@@ -320,6 +321,10 @@
     </div>
   </div>
   <script src="js/main.js"></script>
+  <!--
+  После окончания работы я понял, что мог сделать многие элементы через css :target
+  а модальное окно реализовать через template, но времени на развороты уже нет
+   -->
 </body>
 
 </html>

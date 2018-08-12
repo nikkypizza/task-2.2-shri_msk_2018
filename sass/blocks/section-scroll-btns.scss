@@ -1,0 +1,30 @@
+  .section-scroll-btns {
+  display: none;
+}
+
+@media ($desktop-width) {
+  .section-scroll-btns {
+    display: flex;
+    margin: 0 40px 0 auto;
+  }
+
+  .section-scroll-btns button {
+    &:last-child {
+      margin-top: -3px;
+      margin-left: 5px;
+      transform: rotate(180deg);
+    }
+
+    & svg {
+      fill: rgba(0, 0, 0, .3);
+    }
+
+    &:hover svg {
+      fill: rgba(0, 0, 0, .6);
+    }
+
+    &:active svg {
+      fill: rgba(0, 0, 0, 1);
+    }
+  }
+}

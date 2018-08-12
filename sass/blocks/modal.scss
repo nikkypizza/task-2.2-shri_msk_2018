@@ -62,8 +62,7 @@
     margin-left: 20px;
   }
 
-  & li {
-  }
+  & li {}
 
   & li label {
     font-size: 13px;
@@ -86,7 +85,7 @@
     position: absolute;
     opacity: 0;
 
-    &:checked + label {
+    &:checked+label {
       background-color: $contrast-color;
 
       &:hover {
@@ -170,8 +169,9 @@
   width: 36px;
   height: 36px;
   pointer-events: none; // не даст ползунку слайдера застревать в точках экстремума
-  color: white; // Стили для modal__slider--light
+  color: white;
 
+  // Стили для modal__slider--light
   &--top {
     top: 12px;
     right: 44.3%;
@@ -182,7 +182,8 @@
     right: 44.3%;
     bottom: 14px;
     background-image: url("../img/svg/icon-sun_min.svg");
-  } // Стили для modal__slider--temp
+  }
+  // Стили для modal__slider--temp
   //   &--top {
   //   top: 16px
   //   right: 43.5%
@@ -217,7 +218,6 @@
     border: 3px solid rgba(33, 33, 33, .1); // Внутренний бордер
     border-radius: 30px;
     box-shadow: 0 0 0 4px white; // Внешний бордер
-
     -webkit-appearance: none;
   }
 
@@ -241,6 +241,10 @@
   }
 }
 
+.canvas {
+  padding: 30px 0 0 59px;
+}
+
 @media ($desktop-width) {
   .modal__text {
     height: 123px;
@@ -261,29 +265,22 @@
   }
 
   .modal__device {
-    // height: 343px;
-    // Для не-канваса
-    height: 238px;
-    //для не-канваса
+    height: auto;
   }
 
   .modal__slider-container {
-    height: 60px;
+    height: auto;
   }
 
   .modal__content {
-    // top: 100px;
-    // Для не-канваса
     top: 188px;
-    //для не-канваса
-    justify-content: flex-start;
     width: 630px;
-    min-height: 238px; //89%
+    height: auto;
   }
 
   .modal__slider {
     width: 580px;
-    margin: 5px 0 0 24px;
+    margin: 5px 0 25px 24px;
     transform: rotate(360deg);
   }
 
@@ -298,7 +295,7 @@
     }
 
     &--bottom {
-      bottom: 7px;
+      bottom: 37px;
       left: 37px;
     }
   }
@@ -314,7 +311,6 @@
   }
 
   .modal__bnt-container {
-    justify-content: space-between;
     flex-direction: row;
     height: 60px;
     margin-top: 21px;
@@ -322,5 +318,10 @@
 
   .modal__btn {
     width: 307px;
+  }
+
+  .canvas {
+    padding: 0 0 23px 210px;
+    margin-top: -54px;
   }
 }

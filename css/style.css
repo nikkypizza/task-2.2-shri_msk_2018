@@ -391,6 +391,17 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  font-family: "Arial", sans-serif;
+  min-width: 300px; }
+
+main {
+  min-height: calc(100vh - 150px); }
+
+ul {
+  padding: 0;
+  list-style: none; }
+
 a {
   text-decoration: none; }
 
@@ -399,63 +410,6 @@ button {
   cursor: pointer;
   border: none;
   background-color: transparent; }
-
-ul {
-  padding: 0;
-  list-style: none; }
-
-body {
-  font-family: "Arial", sans-serif;
-  min-width: 300px; }
-
-.svg-sprite {
-  display: none; }
-
-.section-scroll-btns {
-  display: none; }
-
-.canvas {
-  position: absolute;
-  top: 29px;
-  right: 55px; }
-
-main {
-  min-height: calc(100vh - 150px); }
-
-@media (min-width: 1024px) {
-  .main-fav-sections-wrapper {
-    display: flex; }
-  .section-scroll-btns {
-    display: flex;
-    margin: 0 40px 0 auto; }
-  .section-scroll-btns button:last-child {
-    margin-top: -3px;
-    margin-left: 5px;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
-  .section-scroll-btns button svg {
-    fill: rgba(0, 0, 0, 0.3); }
-  .section-scroll-btns button:hover svg {
-    fill: rgba(0, 0, 0, 0.6); }
-  .section-scroll-btns button:active svg {
-    fill: black; }
-  .fav-scripts {
-    overflow: hidden;
-    width: 100%; }
-    .fav-scripts ul {
-      max-height: 331px;
-      margin: 5px 0 0 8px;
-      flex-wrap: wrap; }
-    .fav-scripts ul li {
-      margin-bottom: 13px; }
-  .fav-scripts__header {
-    display: flex;
-    margin-bottom: 0; }
-    .fav-scripts__header h3 {
-      margin-left: 25px; }
-  .canvas {
-    top: -134px;
-    right: 200px; } }
 
 .page-header {
   position: -webkit-sticky;
@@ -767,6 +721,43 @@ main {
   .device-card__text {
     padding: 0 0 14px 14px; } }
 
+.section-scroll-btns {
+  display: none; }
+
+@media (min-width: 1024px) {
+  .section-scroll-btns {
+    display: flex;
+    margin: 0 40px 0 auto; }
+  .section-scroll-btns button:last-child {
+    margin-top: -3px;
+    margin-left: 5px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .section-scroll-btns button svg {
+    fill: rgba(0, 0, 0, 0.3); }
+  .section-scroll-btns button:hover svg {
+    fill: rgba(0, 0, 0, 0.6); }
+  .section-scroll-btns button:active svg {
+    fill: black; } }
+
+@media (min-width: 1024px) {
+  .main-fav-sections-wrapper {
+    display: flex; }
+  .fav-scripts {
+    overflow: hidden;
+    width: 100%; }
+    .fav-scripts ul {
+      max-height: 331px;
+      margin: 5px 0 0 8px;
+      flex-wrap: wrap; }
+    .fav-scripts ul li {
+      margin-bottom: 13px; }
+  .fav-scripts__header {
+    display: flex;
+    margin-bottom: 0; }
+    .fav-scripts__header h3 {
+      margin-left: 25px; } }
+
 .modal {
   position: fixed;
   z-index: 100;
@@ -954,6 +945,9 @@ main {
     -webkit-filter: grayscale(30%);
             filter: grayscale(30%); }
 
+.canvas {
+  padding: 30px 0 0 59px; }
+
 @media (min-width: 1024px) {
   .modal__text {
     height: 123px; }
@@ -968,17 +962,16 @@ main {
     margin-top: 5px;
     padding-left: 25px; }
   .modal__device {
-    height: 238px; }
+    height: auto; }
   .modal__slider-container {
-    height: 60px; }
+    height: auto; }
   .modal__content {
     top: 188px;
-    justify-content: flex-start;
     width: 630px;
-    min-height: 238px; }
+    height: auto; }
   .modal__slider {
     width: 580px;
-    margin: 5px 0 0 24px;
+    margin: 5px 0 25px 24px;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); }
   .modal__slider-indicator {
@@ -987,7 +980,7 @@ main {
     top: 17px;
     right: 42px; }
   .modal__slider-icon--bottom {
-    bottom: 7px;
+    bottom: 37px;
     left: 37px; }
   .modal__slider-output {
     display: block; }
@@ -996,12 +989,14 @@ main {
     .modal__text-radio-container li:first-of-type {
       margin-left: 25px; }
   .modal__bnt-container {
-    justify-content: space-between;
     flex-direction: row;
     height: 60px;
     margin-top: 21px; }
   .modal__btn {
-    width: 307px; } }
+    width: 307px; }
+  .canvas {
+    padding: 0 0 23px 210px;
+    margin-top: -54px; } }
 
 .footer {
   display: flex;

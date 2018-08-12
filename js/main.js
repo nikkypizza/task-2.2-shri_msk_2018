@@ -99,6 +99,19 @@
     headerNode.style.filter = `blur(5px)`;
     bodyNode.style.overflow = `hidden`; // Отменяет тач-скролл страницы при перемещении вертикального слайдера в модальном окне
     modalNode.style.display = `flex`;
+
+    modalContent.style.opacity = 0;
+    const animatePopup = function () {
+      if (modalContent.style.opacity < 1) {
+        modalContent.style.opacity = parseFloat(modalContent.style.opacity) + 0.01;
+      }
+      if (modalContent.style.opacity >= 1) {
+        return;
+      } else {
+        setTimeout(animatePopup, 1);
+      }
+    };
+    animatePopup();
   };
 
   const onModalClose = () => {
@@ -248,12 +261,13 @@
       }
     }, speed);
   };
-// Вешает обработчики клика на кнопки горизонтального пролистывания секции избр.устройств
+  // Вешает обработчики клика на кнопки горизонтального пролистывания секции избр.устройств
   favScrollBtns[0].addEventListener(`click`, () => {
-    sideScroll(favDeviceList, `right`, 25, 150, 20);
+    sideScroll(favDeviceList, `left`, 10, 215, 10);
   });
 
   favScrollBtns[1].addEventListener(`click`, () => {
-    sideScroll(favDeviceList, `left`, 25, 100, 10);
+    sideScroll(favDeviceList, `right`, 10, 215, 10);
   });
+
 })();
