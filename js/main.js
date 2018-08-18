@@ -138,6 +138,7 @@
 
     modalRadioInputs[0].checked = true;
     modalSliderOutput.style.display = ``;
+    modalSliderIndicator.style.backgroundImage = `url("img/svg/icon_temperature_active.svg")`;
 
     document.querySelector(`.modal__slider-output`).value = `+23`;
   };
