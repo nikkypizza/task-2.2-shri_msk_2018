@@ -610,8 +610,7 @@ button {
   .greetings {
     display: flex;
     justify-content: space-between;
-    height: 331px;
-    margin: 19px 4%; }
+    height: 331px; }
   .greetings__info-wrapper {
     padding: 4px 0 6px 26px; }
   .greetings__title {
@@ -893,15 +892,14 @@ button {
   display: block;
   width: 36px;
   height: 36px;
+  right: 149px;
   pointer-events: none;
   color: white; }
   .modal__slider-icon--top {
-    top: 12px;
-    right: 44.3%;
+    top: 18px;
     background-image: url("../img/svg/icon-sun_max.svg"); }
   .modal__slider-icon--bottom {
-    right: 44.3%;
-    bottom: 14px;
+    bottom: 6px;
     background-image: url("../img/svg/icon-sun_min.svg"); }
 
 .modal__slider {
@@ -977,10 +975,11 @@ button {
   .modal__slider-indicator {
     display: block; }
   .modal__slider-icon--top {
-    top: 17px;
+    top: 20px;
     right: 42px; }
   .modal__slider-icon--bottom {
-    bottom: 37px;
+    bottom: 0;
+    top: 20px;
     left: 37px; }
   .modal__slider-output {
     display: block; }

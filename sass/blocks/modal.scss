@@ -168,28 +168,25 @@
   display: block;
   width: 36px;
   height: 36px;
+  right: 149px;
   pointer-events: none; // не даст ползунку слайдера застревать в точках экстремума
   color: white;
 
   // Стили для modal__slider--light
   &--top {
-    top: 12px;
-    right: 44.3%;
+    top: 18px;
     background-image: url("../img/svg/icon-sun_max.svg");
   }
 
   &--bottom {
-    right: 44.3%;
-    bottom: 14px;
+    bottom: 6px;
     background-image: url("../img/svg/icon-sun_min.svg");
   }
   // Стили для modal__slider--temp
   //   &--top {
   //   top: 16px
-  //   right: 43.5%
   // }
   // &--bottom {
-  //   right: 43.5%
   //   bottom: 0;
 }
 
@@ -290,12 +287,13 @@
 
   .modal__slider-icon {
     &--top {
-      top: 17px;
+      top: 20px;
       right: 42px;
     }
 
     &--bottom {
-      bottom: 37px;
+      bottom: 0;
+      top: 20px;
       left: 37px;
     }
   }

@@ -9,9 +9,9 @@ var svgstore = require("gulp-svgstore");
 var rename = require("gulp-rename");
 var imageminPngquant = require('imagemin-pngquant');
 var cssmin = require("gulp-csso");
-var jsmin = require("gulp-jsmin");
 var run = require("run-sequence");
 var del = require("del");
+var uglify = require("gulp-uglify-es").default;
 
 // Minify png
 gulp.task('pngmin', () =>
@@ -87,6 +87,14 @@ gulp.task('sass', function () {
 // BrowserSync all files END //
 //   #####################   //
 
+
+// --------------------------------------------//
+
+
+// ##### //
+// Build //
+// ##### //
+
 gulp.task("copy", function () {
   return gulp.src([
       "*.html",
@@ -109,7 +117,7 @@ gulp.task("cssmin", function() {
 
 gulp.task("jsmin", function () {
     gulp.src('js/*.js')
-        .pipe(jsmin())
+        .pipe(uglify())
         .pipe(gulp.dest('public/js'));
 });
 

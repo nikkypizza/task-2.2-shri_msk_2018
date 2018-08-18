@@ -137,7 +137,6 @@
     modalRadioBtns[3].textContent = `Жарко`;
 
     modalRadioInputs[0].checked = true;
-    modalSliderIndicator.style.backgroundImage = `url("img/svg/icon_temperature_active.svg")`;
     modalSliderOutput.style.display = ``;
 
     document.querySelector(`.modal__slider-output`).value = `+23`;
@@ -169,12 +168,8 @@
       if (isTemperatureCard) {
         modalSlider.classList.add(`modal__slider--temp`);
         modalIcons[0].textContent = `+30`;
-        modalIcons[0].style.top = `16px`;
-        modalIcons[0].style.right = `43.5%`;
 
         modalIcons[1].textContent = `-10`;
-        modalIcons[1].style.bottom = `0`;
-        modalIcons[1].style.right = `43.5%`;
         modalIcons.forEach((element) => {
           element.style.backgroundImage = `none`;
         });
