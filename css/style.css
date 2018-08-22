@@ -574,8 +574,7 @@ button {
   color: #333333; }
 
 .greetings__temperature-wrapper {
-  display: flex;
-  overflow: scroll; }
+  display: flex; }
 
 .greetings__temperature {
   position: relative;
