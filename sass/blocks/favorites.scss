@@ -33,6 +33,7 @@
   .favourites__filter-select {
     display: none;
   }
+
   .favourites__filter-radio {
     display: flex;
     align-items: center;
@@ -45,9 +46,11 @@
 
       &:checked + label {
         background-color: $contrast-color;
+
         &:hover {
           background-color: $contrast-color-hover;
         }
+
         &:active {
           background-color: $contrast-color-active;
         }
@@ -64,6 +67,7 @@
       &:hover {
         @include device-card-hover;
       }
+
       &:active {
         @include device-card-active;
       }

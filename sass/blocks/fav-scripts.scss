@@ -1,29 +1,29 @@
-  @media ($desktop-width) {
-    .main-fav-sections-wrapper {
-      display: flex;
+@media ($desktop-width) {
+  .main-fav-sections-wrapper {
+    display: flex;
+  }
+
+  .fav-scripts {
+    overflow: hidden;
+    width: 100%;
+
+    & ul {
+      max-height: 331px;
+      margin: 5px 0 0 8px;
+      flex-wrap: wrap;
     }
 
-    .fav-scripts {
-      overflow: hidden;
-      width: 100%;
-
-      & ul {
-        max-height: 331px;
-        margin: 5px 0 0 8px;
-        flex-wrap: wrap;
-      }
-
-      & ul li {
-        margin-bottom: 13px;
-      }
-    }
-
-    .fav-scripts__header {
-      display: flex;
-      margin-bottom: 0;
-
-      & h3 {
-        margin-left: 25px;
-      }
+    & ul li {
+      margin-bottom: 13px;
     }
   }
+
+  .fav-scripts__header {
+    display: flex;
+    margin-bottom: 0;
+
+    & h3 {
+      margin-left: 25px;
+    }
+  }
+}

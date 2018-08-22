@@ -424,7 +424,7 @@ button {
 
 .page-header__logo {
   margin: 12px 19px 0 19px;
-  transition: .3s linear; }
+  transition: 0.3s linear; }
 
 .page-header__menu-toggler {
   align-self: center;
@@ -445,14 +445,14 @@ button {
     border-bottom: 1px solid #f0f0f0; }
   .page-header__logo {
     margin: 26px 49px 15px 40px;
-    transition: .3s linear; }
+    transition: 0.3s linear; }
   .page-header__nav-list-item {
     margin: 22px 28px 26px 0; }
     .page-header__nav-list-item a {
       font-size: 16px;
       font-weight: bold;
       line-height: 20px;
-      opacity: .6;
+      opacity: 0.6;
       color: #333333; }
     .page-header__nav-list-item--active a {
       pointer-events: none;
@@ -543,7 +543,7 @@ button {
 
 .greetings {
   width: 89.3%;
-  height: 282px;
+  min-height: 282px;
   margin: 12px 5%;
   border-radius: 20px;
   background-color: #ebe8e3;
@@ -556,14 +556,15 @@ button {
     background-image: url("../img/greeetings_bg@2x.png"); } }
 
 .greetings__info-wrapper {
-  padding: 6px 0 6px 20px; }
+  padding: 6px 0 6px 20px;
+  max-width: 435px; }
 
 .greetings__title {
   font-size: 18px;
   font-weight: bold;
   line-height: 21px;
   margin-bottom: 0;
-  transition: .3s linear;
+  transition: 0.3s linear;
   color: #333333; }
 
 .greetings__subtitle {
@@ -573,7 +574,8 @@ button {
   color: #333333; }
 
 .greetings__temperature-wrapper {
-  display: flex; }
+  display: flex;
+  overflow: scroll; }
 
 .greetings__temperature {
   position: relative;
@@ -669,7 +671,7 @@ button {
   height: 100px;
   margin: 0 0 0 18px;
   cursor: pointer;
-  transition: .1s linear;
+  transition: 0.1s linear;
   border-radius: 20px;
   background-color: #f7f7f7; }
   .device-card:hover {
@@ -919,6 +921,7 @@ button {
   .modal__slider::-webkit-slider-thumb {
     width: 60px;
     height: 60px;
+    background-color: rgba(0, 0, 0, 0);
     border: 3px solid rgba(33, 33, 33, 0.1);
     border-radius: 30px;
     box-shadow: 0 0 0 4px white;
@@ -940,8 +943,8 @@ button {
     background-color: transparent;
     box-shadow: 0 0 0 4px white; }
   .modal__slider:disabled {
-    -webkit-filter: grayscale(30%);
-            filter: grayscale(30%); }
+    -webkit-filter: grayscale(25%);
+            filter: grayscale(25%); }
 
 .canvas {
   padding: 30px 0 0 59px; }

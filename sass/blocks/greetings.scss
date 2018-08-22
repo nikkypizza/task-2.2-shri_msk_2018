@@ -1,18 +1,17 @@
 .greetings {
   width: 89.3%;
-  height: 282px;
+  min-height: 282px;
   margin: 12px 5%;
   border-radius: 20px;
   background-color: #ebe8e3;
   background-image: url("../img/greeetings_bg@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
-  // transition: .3s linear;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5),
-(min-resolution:144dpi),
-(min-resolution:1.5dppx) {
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
   .greetings {
     background-image: url("../img/greeetings_bg@2x.png");
   }
@@ -20,6 +19,7 @@
 
 .greetings__info-wrapper {
   padding: 6px 0 6px 20px;
+  max-width: 435px;
 }
 
 .greetings__title {
@@ -27,7 +27,7 @@
   font-weight: bold;
   line-height: 21px;
   margin-bottom: 0;
-  transition: .3s linear;
+  transition: 0.3s linear;
   color: $font-color-primary;
 }
 
@@ -40,6 +40,7 @@
 
 .greetings__temperature-wrapper {
   display: flex;
+  overflow: scroll;
 }
 
 .greetings__temperature {
@@ -93,6 +94,7 @@
     font-size: 27px;
     line-height: 31px;
   }
+
   .greetings__subtitle {
     font-size: 14px;
     line-height: 16px;
@@ -103,6 +105,7 @@
     font-size: 14px;
     line-height: 16px;
   }
+
   .greetings__temperature-subtitle {
     font-size: 36px;
     line-height: 42px;

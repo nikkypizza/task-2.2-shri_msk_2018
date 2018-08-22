@@ -6,13 +6,14 @@
   height: 100px;
   margin: 0 0 0 18px;
   cursor: pointer;
-  transition: .1s linear;
+  transition: 0.1s linear;
   border-radius: 20px;
   background-color: #f7f7f7;
 
   &:hover {
     @include device-card-hover;
   }
+
   &:active {
     @include device-card-active;
   }
@@ -63,9 +64,11 @@
     min-height: 120px;
     margin-left: 17px;
   }
+
   .device-card__icon--xl {
     padding: 13px 0 0 13px;
   }
+
   .device-card__text {
     padding: 0 0 14px 14px;
   }

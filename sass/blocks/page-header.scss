@@ -1,10 +1,9 @@
 .page-header {
-  position: -webkit-sticky;
-  position:         sticky;
+  position: sticky;
   z-index: 1;
   top: 0;
   display: flex;
-  background-color: rgba(256, 256, 256, .97);
+  background-color: rgba(256, 256, 256, 0.97);
 }
 
 .page-header__nav-list {
@@ -13,7 +12,7 @@
 
 .page-header__logo {
   margin: 12px 19px 0 19px;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
 .page-header__menu-toggler {
@@ -30,6 +29,7 @@
   & a:hover {
     color: lighten($font-color-primary, 30%);
   }
+
   & a:active {
     color: lighten($font-color-primary, 10%);
   }
@@ -42,16 +42,17 @@
 
   .page-header__logo {
     margin: 26px 49px 15px 40px;
-    transition: .3s linear;
+    transition: 0.3s linear;
   }
 
   .page-header__nav-list-item {
     margin: 22px 28px 26px 0;
+
     & a {
       font-size: 16px;
       font-weight: bold;
       line-height: 20px;
-      opacity: .6;
+      opacity: 0.6;
       color: #333333;
     }
 

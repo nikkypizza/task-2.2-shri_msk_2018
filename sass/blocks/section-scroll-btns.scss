@@ -1,4 +1,4 @@
-  .section-scroll-btns {
+.section-scroll-btns {
   display: none;
 }
 
@@ -16,11 +16,11 @@
     }
 
     & svg {
-      fill: rgba(0, 0, 0, .3);
+      fill: rgba(0, 0, 0, 0.3);
     }
 
     &:hover svg {
-      fill: rgba(0, 0, 0, .6);
+      fill: rgba(0, 0, 0, 0.6);
     }
 
     &:active svg {

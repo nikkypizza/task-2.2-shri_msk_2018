@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "В этом репозитории находятся материалы тестового задания по вёрстке для [14-й Школы разработки интерфейсов](https://academy.yandex.ru/events/frontend/shri_msk-2018-2) (осень 2018, Москва, Санкт-Петербург, Симферополь).",
   "main": "index.html",
+  "scripts": {
+    "stylelint": "stylelint 'sass/**/*.scss' --syntax scss"
+  },
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.1.1",
@@ -20,7 +23,9 @@
     "gulp-svgstore": "6.1.1",
     "gulp-uglify-es": "^1.0.4",
     "imagemin-pngquant": "^6.0.0",
-    "run-sequence": "2.2.1"
+    "run-sequence": "2.2.1",
+    "stylelint-config-htmlacademy": "0.1.x",
+    "stylelint": "^9.5.0"
   },
   "author": "nikkypizza",
   "license": "ISC"

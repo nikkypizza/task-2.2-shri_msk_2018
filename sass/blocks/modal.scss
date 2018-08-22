@@ -8,7 +8,7 @@
   display: none; // flex
   align-items: center;
   justify-content: center;
-  background-color: rgba(51, 51, 51, .5);
+  background-color: rgba(51, 51, 51, 0.5);
 }
 
 .modal__content {
@@ -55,14 +55,14 @@
   padding-bottom: 5px;
 
   -ms-overflow-style: none;
+
   &::-webkit-scrollbar {
     display: none;
   }
+
   & li:first-of-type {
     margin-left: 20px;
   }
-
-  & li {}
 
   & li label {
     font-size: 13px;
@@ -76,6 +76,7 @@
     &:hover {
       @include device-card-hover;
     }
+
     &:active {
       @include device-card-active;
     }
@@ -85,12 +86,13 @@
     position: absolute;
     opacity: 0;
 
-    &:checked+label {
+    &:checked + label {
       background-color: $contrast-color;
 
       &:hover {
         background-color: $contrast-color-hover;
       }
+
       &:active {
         background-color: $contrast-color-active;
       }
@@ -124,10 +126,12 @@
       background-color: $contrast-color-active;
     }
   }
+
   &--close {
     &:hover {
       @include device-card-hover;
     }
+
     &:active {
       @include device-card-active;
     }
@@ -198,7 +202,6 @@
   transform: rotate(-90deg);
   border-radius: 35px;
   background-color: $contrast-color;
-
   -webkit-appearance: none;
 
   &--temp {
@@ -212,7 +215,8 @@
   &::-webkit-slider-thumb {
     width: 60px;
     height: 60px;
-    border: 3px solid rgba(33, 33, 33, .1); // Внутренний бордер
+    background-color: rgba(0, 0, 0, 0); // Делает слайдер прозрачным на мобильном сафари
+    border: 3px solid rgba(33, 33, 33, 0.1); // Внутренний бордер
     border-radius: 30px;
     box-shadow: 0 0 0 4px white; // Внешний бордер
     -webkit-appearance: none;
@@ -231,7 +235,7 @@
   }
 
   &:disabled {
-    filter: grayscale(30%);
+    filter: grayscale(25%);
     // Мне показалось логичным, что если есть опция "вручную", то остальные
     // кнопки должны отключать возможность редактирования инпута,
     // но это не точно
@@ -297,12 +301,14 @@
       left: 37px;
     }
   }
+
   .modal__slider-output {
     display: block;
   }
 
   .modal__text-radio-container {
     margin: 21px 0 0 0;
+
     & li:first-of-type {
       margin-left: 25px;
     }

@@ -103,7 +103,7 @@
     modalContent.style.opacity = 0;
     const animatePopup = function () {
       if (modalContent.style.opacity < 1) {
-        modalContent.style.opacity = parseFloat(modalContent.style.opacity) + 0.01;
+        modalContent.style.opacity = parseFloat(modalContent.style.opacity) + 0.05;
       }
       if (modalContent.style.opacity >= 1) {
         return;
